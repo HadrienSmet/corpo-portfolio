@@ -1,0 +1,74 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10vw;
+    position: relative;
+
+    &-title {
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(40px, 4vw, 90px);
+        letter-spacing: var(--space-xs);
+        line-height: 1;
+        position: absolute;
+
+        span {
+            font-family: var(--title-font);
+            white-space: nowrap;
+        }
+
+        &.visible {
+            .developper-name {
+                animation: appearFromLeft 0.35s ease-out 0.1s forwards,
+                    backgroundTitleAnim 20s linear 0.45s alternate infinite;
+            }
+            .profession {
+                animation: appearFromLeft 0.35s ease-out 0.3s forwards,
+                    backgroundTitleAnim 17s linear 0.5s alternate-reverse infinite;
+            }
+        }
+
+        .developper-name {
+            background: linear-gradient(
+                90deg,
+                var(--clr-txt-onBg-03),
+                var(--clr-txt-onBg),
+                var(--clr-txt-onBg-05),
+                var(--clr-txt-onBg),
+                var(--clr-txt-onBg-04),
+                var(--clr-txt-onBg),
+                var(--clr-txt-onBg-05)
+            );
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-position: 0%;
+            background-size: 1000%;
+            font-weight: 900;
+            opacity: 0;
+            text-transform: uppercase;
+            transform: translateX(-20%);
+        }
+        .profession {
+            font-size: 0.7em;
+            background: linear-gradient(
+                90deg,
+                var(--clr-txt-onBg-03),
+                var(--clr-txt-onBg),
+                var(--clr-txt-onBg-04),
+                var(--clr-txt-onBg),
+                var(--clr-txt-onBg-03),
+                var(--clr-txt-onBg),
+                var(--clr-txt-onBg-05)
+            );
+            background-position: 90%;
+            background-size: 1000%;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            transform: translateX(-20%);
+            opacity: 0;
+        }
+    }
+}

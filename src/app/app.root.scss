@@ -1,0 +1,108 @@
+:root {
+    //=====================
+    //=       BLURS       =
+    //=====================
+    --blur-modal:      4px;
+    //=====================
+    //=   BORDER WIDTHS   =
+    //=====================
+    --border-s:        1px;
+    --border-m:        2px;
+    --border-l:        4px;
+
+    //=====================
+    //=       COLORS      =
+    //=====================
+    --clr-bg:                    rgb(238,240,242);
+    --clr-bg-01:            rgba(238,240,242,0.1);
+    --clr-bg-03:            rgba(238,240,242,0.3);
+    --clr-bg-04:            rgba(238,240,242,0.4);
+    --clr-bg-06:            rgba(238,240,242,0.6);
+
+    --clr-bg-secondary:                rgb(0,0,0);
+
+    --clr-bg-dark:             rgb(208, 208, 208);
+    --clr-bg-light:              rgb(255,255,255);
+    --clr-bg-light-05:   rgba(255, 255, 255, 0.5);
+    --clr-bg-light-08:   rgba(255, 255, 255, 0.8);
+    --clr-disabled:               rgba(0,0,0,0.4);
+    --clr-txt:                         rgb(0,0,0);
+    --clr-txt-06:                rgba(0,0,0, 0.6);
+    --clr-txt-04:                 rgba(0,0,0,0.4);
+    --clr-txt-02:                 rgba(0,0,0,0.2);
+    --clr-txt-01:                 rgba(0,0,0,0.1);
+    --clr-txt-onBg:            rgb(255, 255, 255);
+    --clr-txt-onBg-03:    rgba(255, 255, 255, .3);
+    --clr-txt-onBg-04:    rgba(255, 255, 255, .4);
+    --clr-txt-onBg-05:    rgba(255, 255, 255, .5);
+
+    //=====================
+    //=   BORDER RADIUS   =
+    //=====================
+    --radius-s:        0.25rem;
+    --radius-m:         0.5rem;
+    --radius-l:           1rem;
+    --radius-round:      500px;
+
+    //========================
+    //=   SHADIOW POSITION   =
+    //========================
+    --shadow-default: 0 2px 8px;
+
+    //=================
+    //=     SIZES     =
+    //=================
+    --size-xs:         8px;
+    --size-s:         10px;
+    --size-m:         12px;
+    --size-l:         20px;
+
+    //=================
+    //=     SPACES    =
+    //=================
+    --space-none:  0px;
+    --space-xxs:   1px;
+    --space-xs:    2px;
+    --space-s:     4px;
+    --space-m:     8px;
+    --space-l:    12px;
+    --space-xl:   16px;
+    --space-h:    20px;
+    --space-xh:   24px;
+    --space-giga: 28px;
+
+    // =================
+    // =  TRANSITIONS  =
+    // =================
+    --transition-hover:   0.2s;
+    --transition-onClick: 0.3s;
+    --transition-theme:   0.4s;
+    --transition-appear:  0.6s;
+
+    --header-height: 80px;
+}
+
+[data-theme="dark"] {
+    --clr-bg:                rgb(0, 28, 52);
+    --clr-bg-01:        rgba(0, 28, 52,0.1);
+    --clr-bg-03:        rgba(0, 28, 52,0.3);
+    --clr-bg-04:        rgba(0, 28, 52,0.4);
+    --clr-bg-06:        rgba(0, 28, 52,0.6);
+
+    --clr-bg-secondary:  rgb(255, 255, 255);
+
+    --clr-bg-dark:           rgb(1, 22, 42);
+    --clr-bg-light:          rgb(1, 33, 61);
+    --clr-bg-light-05: rgba(1, 33, 61, 0.5);
+    --clr-bg-light-08: rgba(1, 33, 61, 0.8);
+
+    --clr-disabled:     rgba(0, 28, 52,0.4);
+
+    --clr-txt:             rgb(238,240,242);
+    --clr-txt-06:    rgba(255,255,255, 0.6);
+    --clr-txt-04:     rgba(255,255,255,0.4);
+    --clr-txt-02:     rgba(255,255,255,0.2);
+    --clr-txt-01:     rgba(255,255,255,0.1);
+
+    --clr-txt-onBg:            rgb(0, 0, 0);
+}

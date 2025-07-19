@@ -1,0 +1,38 @@
+.double-img-container {
+    display: flex;
+    height: 100%;
+    opacity: 0;
+    position: relative;
+    transition: opacity var(--transition-theme) ease-in-out;
+    transform: translateX(var(--div-translation));
+    width: 400px;
+
+    &.visible {
+        opacity: 1;
+    }
+    > div {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        > img {
+            bottom: 0;
+            height: auto;
+            pointer-events: none;
+            position: absolute;
+            width: 400px;
+        }
+    }
+    .first-img-container {
+        width: var(--first-div-width);
+        img {
+            left: 0;
+        }
+
+    }
+    .second-img-container {
+        width: var(--second-div-width);
+        img {
+            right: 0;
+        }
+    }
+}

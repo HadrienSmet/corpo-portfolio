@@ -1,0 +1,30 @@
+select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+.select-container {
+    align-items: center;
+    display: flex;
+    // min-width: 60px;
+    position: relative;
+
+    select {
+        transition: var(--transition-theme);
+        width: 100%;
+
+        &.on-background {
+            color: var(--clr-txt-onBg);
+            background-color: var(--clr-bg-03);
+        }
+    }
+
+    svg {
+        pointer-events: none;
+        position: absolute;
+        right: var(--space-l);
+        transform: translateX(40%);
+        transition: var(--transition-theme);
+    }
+}

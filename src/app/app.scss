@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "--font-default";
+    src: local("Montserrat-Regular"),
+        url("../assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "--font-title";
+    src: local("RockSalt-Regular"),
+        url("../assets/fonts/RockSalt-Regular.ttf");
+}
+
+#root {
+    background-color: var(--clr-bg-light);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

@@ -1,0 +1,28 @@
+// @media screen and (min-width: 768px) {
+//     .home-background {
+//         transform: translate(-45%, -50%);
+//     }
+// }
+// @media screen and (max-width: 767px) {
+//     .home-background {
+//         transform: translate(-50%, -55%) scale(0.85);
+//     }
+// }
+
+.home {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    &-background {
+        left: calc((100vw - 16px) / 12);
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 250px;
+
+        &.visible {
+            animation: increaseOpacity 1s cubic-bezier(1, 0, 0.82, 0.96) forwards;
+        }
+    }
+}

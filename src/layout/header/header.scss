@@ -1,0 +1,30 @@
+.header {
+    align-items: center;
+    animation: translateDown 0.2s ease-out 0.8s forwards;
+    background-color: var(--clr-bg-secondary);
+    box-shadow: var(--shadow-default) var(--clr-txt-02);
+    color: var(--clr-txt-onBg);
+    display: flex;
+    font-family: --font-title;
+    justify-content: space-between;
+    left: 0;
+    padding: var(--space-xl) var(--space-h);
+    position: fixed;
+    top: 0;
+    transform: translateY(-100%);
+    transition:
+        background-color var(--transition-theme),
+        color var(--transition-theme),
+        transform var(--transition-hover) ease-in-out;
+    width: 100%;
+    z-index: 2;
+
+    &-actions {
+        display: flex;
+        gap: var(--space-m);
+    }
+
+    span {
+        font-size: var(--size-l);
+    }
+}
