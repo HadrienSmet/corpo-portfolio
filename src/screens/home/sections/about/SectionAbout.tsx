@@ -5,7 +5,7 @@ import { useElementVisibility } from "@/hooks";
 import { DoubleImageDivision } from "./doubleImage";
 import "./aboutSection.scss";
 
-export const AboutSection = () => {
+export const SectionAbout = () => {
     const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
 

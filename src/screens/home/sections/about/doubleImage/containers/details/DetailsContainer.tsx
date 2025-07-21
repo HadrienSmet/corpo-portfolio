@@ -1,10 +1,12 @@
 import { RefObject, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { useElementVisibility, useWindowSize } from "@/hooks";
 
+import { useDoubleImageDimensions } from "../useDoublieImageDimensions";
+
 import "./detailsContainer.scss";
-import { useTranslation } from "react-i18next";
 
 type DetailCardProps = {
     readonly details: Array<string>;
@@ -21,7 +23,12 @@ const DetailCard = ({ details, dynamicClass, ref, title, to }: DetailCardProps) 
     >
         <h3>{title}</h3>
         <ul>
-            {details.map((detail, i) => (<li key={detail} style={{ transitionDelay: `${.5 + (i*.08)}s` }}>{detail}</li>))}
+            {details.map((detail, i) => (
+                <li
+                    key={detail}
+                    style={{ transitionDelay: `${.5 + (i*.08)}s` }}
+                >{detail}</li>
+            ))}
         </ul>
     </Link>
 );
@@ -66,6 +73,7 @@ const useDetailsOnMouseMove = () => {
 
 export const DetailsContainer = () => {
     const { myRef, myWorkRef } = useDetailsOnMouseMove();
+    const { height } = useDoubleImageDimensions();
     const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
 
@@ -96,7 +104,11 @@ export const DetailsContainer = () => {
     ];
 
     return (
-        <div ref={elementRef} className="details-container">
+        <div
+            ref={elementRef}
+            className="details-container"
+            style={{ height }}
+        >
             {cards.map(card => <DetailCard key={card.to} {...card} />)}
         </div>
     );

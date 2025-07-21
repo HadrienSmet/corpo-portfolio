@@ -1,0 +1,43 @@
+.modal {
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+
+    &.opened {
+        .modal {
+            &-backdrop {
+                opacity: 1;
+                pointer-events: all;
+            }
+            &-content {
+                pointer-events: all;
+            }
+        }
+    }
+    &.closed {
+        .modal {
+            &-backdrop {
+                opacity: 0;
+                pointer-events: none;
+            }
+            &-content {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &-backdrop {
+        backdrop-filter: blur(var(--blur-modal));
+        background-color: var(--clr-bg-01);
+        height: 100%;
+        position: absolute;
+        transition: 0.3s ease-out;
+        width: 100%;
+    }
+
+    &-content {
+        display: flex;
+        z-index: 2;
+    }
+}

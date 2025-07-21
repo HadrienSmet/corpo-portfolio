@@ -1,3 +1,7 @@
+.button-styleless {
+    background-color: transparent;
+    outline: inherit;
+}
 .input {
     background-color: var(--clr-bg-dark);
     border: none;

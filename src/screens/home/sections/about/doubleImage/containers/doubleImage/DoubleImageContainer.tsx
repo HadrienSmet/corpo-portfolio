@@ -1,6 +1,8 @@
 import { RefObject, useEffect, useRef } from "react";
 
-import { useIntersectionObserver } from "@/hooks";
+import { useIntersectionObserver, useWindowSize } from "@/hooks";
+
+import { useDoubleImageDimensions } from "../useDoublieImageDimensions";
 
 import "./doubleImageContainer.scss";
 
@@ -50,12 +52,13 @@ const handleContainersWidth = (
 };
 
 const useImageMouseMove = () => {
+    const { width: windowWidth } = useWindowSize();
+
     const doubleImgRef = useRef<HTMLDivElement | null>(null);
     const firstImgContainerRef = useRef<HTMLDivElement | null>(null);
     const secondImgContainerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-        const windowWidth = window.innerWidth;
         const handlePictureOnMouseMove = (e: MouseEvent) => {
             const ratioX = (e.clientX / windowWidth) * 100;
 
@@ -71,12 +74,13 @@ const useImageMouseMove = () => {
         return () => {
             window.removeEventListener("mousemove", handlePictureOnMouseMove);
         };
-    }, []);
-    return {
+    }, [windowWidth]);
+
+    return ({
         doubleImgRef,
         firstImgContainerRef,
         secondImgContainerRef,
-    };
+    });
 };
 
 const useImageOnScroll = ({ doubleImgRef }: ImgOnScrollPropsType) => {
@@ -84,38 +88,45 @@ const useImageOnScroll = ({ doubleImgRef }: ImgOnScrollPropsType) => {
         threshold: 0.5,
         rootMargin: "0px",
     });
+
     useEffect(() => {
-        if (doubleImgRef.current !== null && observer !== null)
+        if (doubleImgRef.current !== null && observer !== null) {
             observer.observe(doubleImgRef.current);
+        }
     }, [doubleImgRef, observer]);
 };
 
-const IMAGE_HEIGHT = 420 as const;
-const IMAGE_WIDTH = 550 as const;
 export const DoubleImageContainer = () => {
-    const { doubleImgRef, firstImgContainerRef, secondImgContainerRef } =
-        useImageMouseMove();
+    const { height, width } = useDoubleImageDimensions();
+    const {
+        doubleImgRef,
+        firstImgContainerRef,
+        secondImgContainerRef,
+    } = useImageMouseMove();
+
     useImageOnScroll({ doubleImgRef });
+
     return (
         <div
             id="double-image"
             ref={doubleImgRef}
             className="double-img-container"
+            style={{ transform: `translateX(var(--div-translation))`, width }}
         >
             <div ref={firstImgContainerRef} className="first-img-container">
                 <img
                     src="/images/dev-portrait-pochoir.webp"
                     alt="Illustration of myself"
-                    width={IMAGE_WIDTH}
-                    height={IMAGE_HEIGHT}
+                    height={height}
+                    width={width}
                 />
             </div>
             <div ref={secondImgContainerRef} className="second-img-container">
                 <img
                     src="/images/dev-portrait.webp"
                     alt="Picture of myself"
-                    width={IMAGE_WIDTH}
-                    height={IMAGE_HEIGHT}
+                    height={height}
+                    width={width}
                 />
             </div>
         </div>

@@ -1,0 +1,57 @@
+.navigation {
+    background-color: var(--clr-bg-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-h);
+    height: 100%;
+    padding: var(--space-giga);
+    transform-origin: right;
+
+    a {
+        align-items: center;
+        animation-fill-mode: forwards;
+        color: var(--clr-txt-onBg);
+        display: flex;
+        font-size: var(--size-l);
+        font-weight: 700;
+        gap: var(--space-m);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+    &.closed {
+        animation: decreaseScaleX 0.2s ease-in-out 0.5s forwards !important;
+        transform: scaleX(1);
+
+        a {
+            animation-name: disappearRight;
+            animation-duration: 0.2s;
+            animation-timing-function: ease-in;
+            opacity: 1;
+            transform: translateX(0);
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: (0.15s + (4 - $i) * 60ms);
+                    }
+                }
+            }
+    }
+    &.opened {
+        animation: increaseScaleX 0.2s ease-in-out forwards !important;
+        transform: scaleX(1);
+
+        a {
+            animation-name: appearFromRight;
+            animation-duration: 0.3s;
+            animation-timing-function: ease-out;
+            opacity: 0;
+            transform: translateX(20px);
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: (0.15s + $i * 60ms);
+                }
+            }
+        }
+    }
+}

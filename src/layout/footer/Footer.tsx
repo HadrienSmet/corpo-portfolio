@@ -1,17 +1,25 @@
 import { DoubleUp, Envelope, Github, Linkedin } from "@/assets";
-
-import "./footer.scss";
 import { useCssVariable } from "@/hooks";
 
+import "./footer.scss";
+
+const ICON_SIZE = 48 as const;
 export const Footer = () => {
     const handleScrollToTop = () => window.scrollTo(0, 0);
 
     const mainTextOnBg = useCssVariable("--clr-txt-onBg");
+    const defaultIconProps = {
+        color: mainTextOnBg,
+        size: ICON_SIZE,
+    } as const;
 
     return (
         <footer className="footer">
-            <button onClick={handleScrollToTop}>
-                <DoubleUp />
+            <button
+                className="button-styleless"
+                onClick={handleScrollToTop}
+            >
+                <DoubleUp {...defaultIconProps} />
             </button>
             <em>Hadri</em>
             <div className="footer__links-container">
@@ -27,7 +35,7 @@ export const Footer = () => {
                         size={48}
                         color="#0172b1"
                     />
-                    <Linkedin size={48} color={mainTextOnBg} />
+                    <Linkedin {...defaultIconProps} />
                 </a>
                 <a
                     href="https://github.com/HadrienSmet"
@@ -41,10 +49,7 @@ export const Footer = () => {
                         size={48}
                         color="#0076b2"
                     />
-                    <Github
-                        size={48}
-                        color={mainTextOnBg}
-                    />
+                    <Github {...defaultIconProps} />
                 </a>
                 <a
                     href="mailto:hadriensmet96@gmail.com"
@@ -58,10 +63,7 @@ export const Footer = () => {
                         size={48}
                         color="#df574b"
                     />
-                    <Envelope
-                        size={48}
-                        color={mainTextOnBg}
-                    />
+                    <Envelope {...defaultIconProps} />
                 </a>
             </div>
         </footer>

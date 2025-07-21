@@ -15,12 +15,12 @@ export const ThemedInkBackground = ({ parentClassName }: ThemedInkBackgroundProp
     const [scale, setScale] = useState(1);
 
     const { theme } = useTheme();
-    const { height, width } = useWindowSize();
+    const { width } = useWindowSize();
 
     useEffect(() => {
         const ratio = width / REFERENCE_WIDTH;
         setScale(ratio);
-    }, [height, width]);
+    }, [width]);
 
     const getClassName = (t: Theme) =>
         `${parentClassName}-background ${theme === t ? "visible" : ""}`;

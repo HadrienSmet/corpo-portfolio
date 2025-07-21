@@ -20,6 +20,17 @@ export const fr = {
                 title: "Plus sur mon travail",
             },
         },
+        contact: {
+            curriculum: "Télécharger mon cv",
+            inputs: {
+                email: "Email",
+                message: "Message",
+                name: "Nom",
+                submit: "Envoyer",
+            },
+            subtitle: "Contactes-moi par email ou via mes réseaux sociaux",
+            title: "Envie de travailler ensemble ?",
+        },
         profession: "Développeur full stack",
     },
 };

@@ -9,8 +9,16 @@
         url("../assets/fonts/RockSalt-Regular.ttf");
 }
 
+#portal {
+    height: 100vh;
+    padding-top: var(--header-height);
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
 #root {
-    background-color: var(--clr-bg-light);
+    background-color: var(--clr-bg);
     display: flex;
     flex-direction: column;
     height: 100%;

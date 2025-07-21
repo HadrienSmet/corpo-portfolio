@@ -22,7 +22,7 @@
         top: 250px;
 
         &.visible {
-            animation: increaseOpacity 1s cubic-bezier(1, 0, 0.82, 0.96) forwards;
+            animation: increaseOpacity 1s ease-in forwards;
         }
     }
 }

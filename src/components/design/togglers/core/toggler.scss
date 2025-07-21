@@ -10,7 +10,6 @@
     transition: background-color var(--transition-theme);
 
     &__indicator {
-        // background: linear-gradient(to bottom, var(--clr-bg-light), var(--clr-bg-dark));
         background: linear-gradient(to bottom, var(--clr-bg-04), var(--clr-bg-06));
         border-radius: 50%;
         box-shadow: 0 1px 12px var(--clr-txt-04),

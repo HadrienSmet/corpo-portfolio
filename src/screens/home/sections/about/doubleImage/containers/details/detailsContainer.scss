@@ -1,13 +1,11 @@
 .details-container {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    height: 100%;
     justify-content: space-between;
     left: 0;
     opacity: 0;
     padding-inline: var(--space-giga);
     position: absolute;
-    top: 0;
     transition: 0.2s ease-in-out;
     width: 100%;
 

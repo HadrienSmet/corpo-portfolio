@@ -1,0 +1,64 @@
+.contact {
+    align-items: center;
+    background: url(images/grunge-pattern.webp) center/cover;
+    display: flex;
+    justify-content: center;
+    padding-block: 120px;
+    padding-inline: calc((100vw - 16px) / 12);
+    &-content {
+        align-items: center;
+        background-color: var(--clr-bg);
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        opacity: 0;
+        padding: 40px;
+        transform: scale(0) translateY(5px);
+        transition: var(--transition-onClick) ease-out;
+        width: 100%;
+
+        &.visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+
+            .contact-header {
+                &::after {
+                    transform: scaleX(1);
+                }
+                .social-media-container a {
+                    animation: appearFromTop var(--transition-onClick) ease-out forwards;
+                }
+
+                &__badge {
+                    animation: appearFromRight var(--transition-onClick) ease-out 0.32s forwards;
+                    span {
+                        animation: appearFromBottom 0.4s ease-out forwards;
+                    }
+                }
+                &__titles {
+                    h2 {
+                        animation: appearFromLeft var(--transition-onClick) ease-out 0.28s forwards;
+                    }
+                    h3 {
+                        animation: appearFromLeft var(--transition-onClick) ease-out 0.38s forwards;
+                    }
+                }
+            }
+            .contact-form {
+                > div label {
+                    animation: appearFromTop var(--transition-onClick) ease-out forwards;
+                }
+                input {
+                    animation: appearFromRight var(--transition-onClick) ease-out 0.52s forwards;
+                }
+                textarea {
+                    animation: appearFromLeft var(--transition-onClick) ease-out 0.6s forwards;
+                }
+                .gradient {
+                    animation: appearFromBottom var(--transition-onClick) ease-out 0.68s forwards;
+                }
+            }
+        }
+    }
+}
