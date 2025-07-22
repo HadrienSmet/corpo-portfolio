@@ -1,11 +1,3 @@
-export * from "./DoubleUp";
-export * from "./Envelope";
-export * from "./ExpandMore";
-export * from "./Facebook";
-export * from "./Github";
-export * from "./Hiking";
-export * from "./Home";
-export * from "./Linkedin";
-export * from "./Work";
-
+export * from "./medias";
 export * from "./stacks";
+export * from "./ui";
