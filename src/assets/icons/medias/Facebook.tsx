@@ -1,6 +1,6 @@
 import { useCssVariable } from "@/hooks";
 
-import { IconProps } from "./icons.types";
+import { IconProps } from "../icons.types";
 
 export const Facebook = ({ color, dynamicClass }: IconProps) => {
     const lightBg = useCssVariable("--clr-bg");

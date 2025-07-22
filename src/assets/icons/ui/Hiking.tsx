@@ -1,5 +1,5 @@
-import { DEFAULT_SIZE } from "./icons.const";
-import { IconProps } from "./icons.types";
+import { DEFAULT_SIZE } from "../icons.const";
+import { IconProps } from "../icons.types";
 
 export const Hiking = ({ color, dynamicClass, size = DEFAULT_SIZE }: IconProps) => (
     <svg
