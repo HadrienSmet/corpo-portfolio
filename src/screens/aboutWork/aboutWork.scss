@@ -1,0 +1,9 @@
+.about-work {
+    display: flex;
+    flex-direction: column;
+    padding-inline: var(--space-giga);
+
+    h1 span {
+        font-family: --font-title;
+    }
+}

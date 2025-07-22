@@ -1,7 +1,8 @@
 import { RefObject, useEffect, useRef } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
+import { GlowingButton, ROUTES } from "@/components";
 import { useElementVisibility, useWindowSize } from "@/hooks";
 
 import { useDoubleImageDimensions } from "../useDoublieImageDimensions";
@@ -11,33 +12,43 @@ import "./detailsContainer.scss";
 type DetailCardProps = {
     readonly details: Array<string>;
     readonly dynamicClass: string;
-    readonly ref: RefObject<HTMLAnchorElement | null>;
+    readonly ref: RefObject<HTMLButtonElement | null>;
     readonly title: string;
     readonly to: string;
 };
 const DetailCard = ({ details, dynamicClass, ref, title, to }: DetailCardProps) => (
-    <Link
-        to={to}
-        ref={ref}
+    <GlowingButton
         className={dynamicClass}
+        ref={ref}
     >
-        <h3>{title}</h3>
-        <ul>
-            {details.map((detail, i) => (
-                <li
-                    key={detail}
-                    style={{ transitionDelay: `${.5 + (i*.08)}s` }}
-                >{detail}</li>
-            ))}
-        </ul>
-    </Link>
+        <Link
+            to={to}
+            className={dynamicClass}
+        >
+            <Trans
+                i18nKey={title}
+                components={{
+                    default: <h3></h3>,
+                    styled: <span></span>,
+                }}
+            />
+            <ul>
+                {details.map((detail, i) => (
+                    <li
+                        key={detail}
+                        style={{ transitionDelay: `${.5 + (i*.08)}s` }}
+                    >{detail}</li>
+                ))}
+            </ul>
+        </Link>
+    </GlowingButton>
 );
 
 const useDetailsOnMouseMove = () => {
     const { width } = useWindowSize();
 
-    const myRef = useRef<HTMLAnchorElement | null>(null);
-    const myWorkRef = useRef<HTMLAnchorElement | null>(null);
+    const myRef = useRef<HTMLButtonElement | null>(null);
+    const myWorkRef = useRef<HTMLButtonElement | null>(null);
 
     useEffect(() => {
         const handlePictureOnMouseMove = (e: MouseEvent) => {
@@ -73,33 +84,33 @@ const useDetailsOnMouseMove = () => {
 
 export const DetailsContainer = () => {
     const { myRef, myWorkRef } = useDetailsOnMouseMove();
-    const { height } = useDoubleImageDimensions();
+    const { height, width } = useDoubleImageDimensions();
     const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
 
     const cards: Array<DetailCardProps> = [
         {
             details: [
-                t("about.work.items.experience"),
-                t("about.work.items.projects"),
-                t("about.work.items.stack"),
+                t("about.work.card.items.experience"),
+                t("about.work.card.items.projects"),
+                t("about.work.card.items.stack"),
             ],
             dynamicClass: "details-about-my-work",
             ref: myWorkRef,
-            title: t("about.work.title"),
-            to: "/aboutMyWork"
+            title: t("about.work.card.title"),
+            to: ROUTES.aboutWork,
         },
         {
             details: [
-                t("about.me.items.softSkills"),
-                t("about.me.items.pictures"),
-                t("about.me.items.hobbies"),
-                t("about.me.items.personnalityTests"),
+                t("about.me.card.items.softSkills"),
+                t("about.me.card.items.pictures"),
+                t("about.me.card.items.hobbies"),
+                t("about.me.card.items.personnalityTests"),
             ],
             dynamicClass: "details-about-me",
             ref: myRef,
-            title: t("about.me.title"),
-            to: "/aboutMe"
+            title: t("about.me.card.title"),
+            to: ROUTES.aboutMe,
         },
     ];
 
@@ -107,7 +118,7 @@ export const DetailsContainer = () => {
         <div
             ref={elementRef}
             className="details-container"
-            style={{ height }}
+            style={{ gap: width, height }}
         >
             {cards.map(card => <DetailCard key={card.to} {...card} />)}
         </div>

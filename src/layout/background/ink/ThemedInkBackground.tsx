@@ -33,7 +33,7 @@ export const ThemedInkBackground = ({ parentClassName }: ThemedInkBackgroundProp
                 className={getClassName(THEME.DARK)}
                 height={IMAGE_SIZE}
                 loading="lazy"
-                src={`/images/${THEME.DARK}-ink-splash.webp`}
+                src={`/images/backgrounds/${THEME.DARK}-ink-splash.webp`}
                 style={{ transform: `translate(-45%, -50%) scale(${scale})` }}
                 width={IMAGE_SIZE}
             />
@@ -42,7 +42,7 @@ export const ThemedInkBackground = ({ parentClassName }: ThemedInkBackgroundProp
                 className={getClassName(THEME.LIGHT)}
                 height={IMAGE_SIZE}
                 loading="lazy"
-                src={`/images/${THEME.LIGHT}-ink-splash.webp`}
+                src={`/images/backgrounds/${THEME.LIGHT}-ink-splash.webp`}
                 style={{ transform: `translate(-45%, -50%) scale(${scale})` }}
                 width={IMAGE_SIZE}
             />

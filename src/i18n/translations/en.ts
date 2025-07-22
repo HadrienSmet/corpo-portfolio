@@ -2,22 +2,27 @@ export const en = {
     translation: {
         about: {
             me: {
-                items: {
-                    hobbies: "Some hobbies",
-                    personnalityTests: "Personnality tests",
-                    pictures: "Some pictures",
-                    softSkills: "Soft skills",
-                },
-                title: "More about me",
+                card: {
+                    items: {
+                        hobbies: "Some hobbies",
+                        personnalityTests: "Personnality tests",
+                        pictures: "Some pictures",
+                        softSkills: "Soft skills",
+                    },
+                    title: "<default>More about <styled>me</styled></default>",
+                }
             },
             title: "If you want to learn",
             work: {
-                items: {
-                    experience: "Professionnal experiences",
-                    projects: "Personnal projects",
-                    stack: "Technical stack",
+                card: {
+                    items: {
+                        experience: "Professionnal experiences",
+                        projects: "Personnal projects",
+                        stack: "Technical stack",
+                    },
+                    title: "<default>More about <styled>my work</styled></default>",
                 },
-                title: "More about my work",
+                title: "<default>About <styled>my work</styled></default>",
             },
         },
         contact: {
@@ -31,6 +36,22 @@ export const en = {
             subtitle: "Get in touch with me via social media or mail",
             title: "Wants to work together?",
         },
-        profession: "Full stack developper"
+        experiences: {
+            future: "You might be the next one!",
+            reachup: {
+                title: "Front-end developper",
+                descriptions: {
+                    0: "As a Full-Stack Developer with a strong emphasis on Front-End Development, I have spent the past two years contributing to a fast-paced startup, where I played a key role in shaping and optimizing the user experience.",
+                    1: "On the front end, I designed and implemented new pages, components, and forms, ensuring a smooth and responsive experience across devices. I handled offline functionality, UI updates, email displays, and application versioning, always striving for clean, maintainable, and scalable code.",
+                    2: "Beyond front-end, I expanded my expertise into the back-end, working extensively with AWS services to develop data processing pipelines, database interactions (DynamoDB), and system integrations. I implemented batch processing, encryption strategies, and cloud infrastructure improvements, showcasing my ability to bridge the gap between front-end and back-end technologies.",
+                    3: "I thrive in collaborative environments, enjoy tackling complex technical challenges, and am passionate about delivering high-quality user interfaces that enhance engagement and performance.",
+                },
+            },
+            title: "Professionnal experiences",
+        },
+        profession: "Full stack developper",
+        projects: {
+            title: "My online projects",
+        },
     },
 };

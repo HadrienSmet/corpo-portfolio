@@ -9,6 +9,9 @@
         transform: translateX(0);
     }
     h2 {
+        font-size: clamp(24px, 2vw, 50px);
+        font-weight: 900;
+        letter-spacing: 1.5px;
         margin-top: var(--space-h);
         opacity: 0;
         text-transform: uppercase;

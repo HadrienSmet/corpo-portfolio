@@ -89,7 +89,10 @@ export const Header = () => {
                     isOpen={isNavOpen}
                     type={MODAL_TYPES.right}
                 >
-                    <Navigation isOpen={isNavOpen} />
+                    <Navigation
+                        close={() => setIsNavOpen(false)}
+                        isOpen={isNavOpen}
+                    />
                 </Modal>
             )}
         </header>

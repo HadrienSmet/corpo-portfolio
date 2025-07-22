@@ -7,3 +7,5 @@ export * from "./Hiking";
 export * from "./Home";
 export * from "./Linkedin";
 export * from "./Work";
+
+export * from "./stacks";

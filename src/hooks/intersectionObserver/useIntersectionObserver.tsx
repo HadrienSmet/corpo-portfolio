@@ -32,5 +32,5 @@ export const useIntersectionObserver = ({
         setObserver(observer);
     }, [rootMargin, threshold]);
 
-    return observer;
+    return (observer);
 };

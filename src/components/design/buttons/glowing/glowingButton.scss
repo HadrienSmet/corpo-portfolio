@@ -1,0 +1,38 @@
+@property --glowing-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes spin {
+    0% {
+        --glowing-angle: 0deg;
+    }
+    100% {
+        --glowing-angle: 360deg;
+    }
+}
+
+.glowing-button {
+    border-radius: 8px;
+    position: relative;
+
+    &::after,
+    &::before {
+        animation: spin 9s linear infinite;
+        background-image: conic-gradient(from var(--glowing-angle), rgb(155, 196, 210), rgb(58, 74, 98), rgb(155, 196, 210));
+        border-radius: 10px;
+        content: "";
+        height: 100%;
+        left: 50%;
+        padding: var(--border-m);
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: -1;
+    }
+    &::before {
+        filter: blur(1.7rem);
+        opacity: .5;
+    }
+}

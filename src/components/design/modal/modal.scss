@@ -8,10 +8,10 @@
         .modal {
             &-backdrop {
                 opacity: 1;
-                pointer-events: all;
+                pointer-events: auto;
             }
             &-content {
-                pointer-events: all;
+                pointer-events: auto;
             }
         }
     }

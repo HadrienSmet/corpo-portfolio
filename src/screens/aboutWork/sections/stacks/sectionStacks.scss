@@ -1,0 +1,39 @@
+.section-stacks {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    width: 100%;
+    &.visible {
+        h2 {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .stacks-container svg {
+            animation: appearFromBottom 0.2s ease-out forwards;
+        }
+    }
+    h2 {
+        font-family: var(--title-font);
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: 0.7s ease-out;
+    }
+
+    .stacks-container {
+        display: flex;
+        gap: var(--space-l);
+        min-width: 710px;
+        width: 45%;
+
+        svg {
+            opacity: 0;
+            transform: translateY(10%);
+
+            @for $i from 1 through 12 {
+                &:nth-child(#{$i}) {
+                    animation-delay: (0.15s + $i * 60ms);
+                }
+            }
+        }
+    }
+}
