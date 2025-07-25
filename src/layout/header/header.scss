@@ -12,7 +12,13 @@
     position: fixed;
     top: 0;
     transform: translateY(-100%);
-    transition: var(--transition-theme);
+    transition:
+        background-color var(--transition-theme),
+        color var(--transition-theme),
+        translateY var(--transition-onClick),
+        translate var(--transition-onClick),
+        transform var(--transition-onClick)
+        ;
     width: 100%;
     z-index: 2;
 

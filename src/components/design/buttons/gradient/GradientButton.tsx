@@ -1,26 +1,23 @@
-import { RefObject, useEffect, useRef } from "react";
+import { PropsWithChildren, RefObject, useEffect, useRef } from "react";
 
 import "./gradientButton.scss";
 
-export const findDegree = (
-    element: HTMLDivElement,
-    event: MouseEvent
+const findDegree = (
+  element: HTMLDivElement,
+  event: MouseEvent
 ): number => {
-    const rect = element !== null
-        ? element.getBoundingClientRect()
-        : undefined;
+    const rect = element.getBoundingClientRect();
 
-    if (rect !== undefined) {
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
 
-        const radianDegree = Math.atan2(y, x);
-        const degree = (radianDegree * 180) / Math.PI + 180;
+    const dx = event.clientX - cx;
+    const dy = event.clientY - cy;
 
-        return (degree);
-    } else {
-        return (0);
-    }
+    const rad = Math.atan2(dy, dx);
+    const deg = (rad * 180) / Math.PI + 90;
+
+    return ((deg + 360) % 360);
 };
 
 const useGradientButton = (): RefObject<HTMLDivElement | null> => {
@@ -50,16 +47,21 @@ const useGradientButton = (): RefObject<HTMLDivElement | null> => {
     return (ref);
 };
 
-type GradientButtonProps = {
-    readonly label: string;
-    readonly onClick: () => void;
-};
-export const GradientButton = ({ label, onClick }: GradientButtonProps) => {
+type GradientButtonProps =
+    | {
+        readonly label: string;
+        readonly onClick: () => void;
+    }
+    | PropsWithChildren;
+export const GradientButton = (props: GradientButtonProps) => {
     const ref = useGradientButton();
 
     return (
         <div ref={ref} className="gradient">
-            <button onClick={onClick}>{label}</button>
+            {"label" in props
+                ? (<button onClick={props.onClick}>{props.label}</button>)
+                : (props.children)
+            }
         </div>
     );
 };

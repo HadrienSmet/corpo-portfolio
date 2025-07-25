@@ -1,7 +1,13 @@
+import { DEFAULT_SIZE } from "../icons.const";
 import { IconProps } from "../icons.types";
 
-export const Github = ({ dynamicClass = "", color }: IconProps) => (
-    <svg className={dynamicClass} viewBox="0 0 128 128">
+export const Github = ({ dynamicClass = "", color, size = DEFAULT_SIZE }: IconProps) => (
+    <svg
+        className={dynamicClass}
+        height={size}
+        width={size}
+        viewBox="0 0 128 128"
+    >
         <g fill={color}>
             <path
                 fillRule="evenodd"

@@ -1,7 +1,7 @@
 .modal {
     display: flex;
     height: 100%;
-    position: relative;
+    position: fixed;
     width: 100%;
 
     &.opened {

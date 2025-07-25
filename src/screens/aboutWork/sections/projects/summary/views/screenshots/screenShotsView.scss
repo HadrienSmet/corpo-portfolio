@@ -1,0 +1,21 @@
+.project-summary-screenshots {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-l);
+    position: relative;
+    max-height: var(--project-content-height);
+    overflow: scroll;
+
+    .screenshots-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-l);
+
+        img {
+            box-shadow: var(--shadow-default) var(--clr-txt-02);
+            margin-bottom: var(--space-m);
+            width: 100%;
+        }
+    }
+}

@@ -3,7 +3,7 @@
     height: 100%;
     opacity: 0;
     position: relative;
-    transition: opacity var(--transition-theme) ease-in-out;
+    transition: opacity .4s ease-in-out;
 
     &.visible {
         opacity: 1;

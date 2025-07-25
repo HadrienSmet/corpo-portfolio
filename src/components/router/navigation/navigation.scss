@@ -5,7 +5,9 @@
     gap: var(--space-h);
     height: 100%;
     padding: var(--space-giga);
+    padding-top: calc(var(--space-giga) + var(--header-height));
     transform-origin: right;
+    transition: background-color var(--transition-theme);
 
     a {
         align-items: center;

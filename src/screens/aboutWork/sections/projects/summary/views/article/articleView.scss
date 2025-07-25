@@ -1,0 +1,14 @@
+.project-summary {
+    &-data {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: var(--space-xh);
+        padding: var(--space-xl);
+    }
+    &-description {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+    }
+}

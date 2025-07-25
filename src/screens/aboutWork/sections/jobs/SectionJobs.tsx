@@ -1,33 +1,15 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useElementVisibility } from "@/hooks";
+import { JobItem, JOBS } from "@/data";
+
 import "./sectionJobs.scss";
 
-type JobItem = {
-    readonly company: string;
-    readonly descriptionsAmount: number;
-    readonly id: string;
-    readonly period: {
-        start: string;
-        end?: string;
-    };
-    readonly stacks: Array<string>;
-    readonly title: string;
-};
-const JOBS: Array<JobItem> = [
-    {
-        company: "Reach Up",
-        id: "reachup",
-        descriptionsAmount: 3,
-        period: {
-            start: "31/10/2023",
-        },
-        title: "Front-end developper",
-        stacks: ["React", "React-Native", "TypeScript", "NodeJS", "AWS"],
-    },
-];
 const JobCard = (props: JobItem) => {
+    const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
+
     const descriptions = useMemo(() => {
         const output: Array<string> = [];
 
@@ -41,7 +23,7 @@ const JobCard = (props: JobItem) => {
     }, [t])
 
     return (
-        <div className="job-card">
+        <div ref={elementRef} className="job-card">
             <div className="job-card__header">
                 <div className="job-card__company">
                     <div className="job-card__company-logo">
@@ -66,10 +48,14 @@ const JobCard = (props: JobItem) => {
     );
 };
 export const SectionJobs = () => {
+    const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
 
     return (
-        <section className="section-experiences">
+        <section
+            className="section-experiences"
+            ref={elementRef}
+        >
             <h2>{t("experiences.title")}</h2>
             <div className="experiences-container">
                 {JOBS.map(job => <JobCard key={job.company} {...job} />)}

@@ -11,7 +11,7 @@ select {
     position: relative;
 
     select {
-        transition: var(--transition-theme);
+        transition: background-color var(--transition-theme), color var(--transition-theme);
         width: 100%;
 
         &.on-background {
@@ -25,6 +25,6 @@ select {
         position: absolute;
         right: var(--space-l);
         transform: translateX(40%);
-        transition: var(--transition-theme);
+        transition: background-color var(--transition-theme), color var(--transition-theme);
     }
 }

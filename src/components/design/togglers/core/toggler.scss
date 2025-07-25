@@ -20,6 +20,6 @@
         transform: scale(0.87);
         transition:
             background-color var(--transition-theme),
-            left var(--transition-theme);
+            left 0.4s;
     }
 }

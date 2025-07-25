@@ -1,0 +1,21 @@
+.project-summary {
+    &-video {
+        box-shadow: var(--shadow-default) var(--clr-txt-02);
+        display: flex;
+        gap: var(--space-h);
+        padding: var(--space-l);
+
+        p {
+            line-height: 1.5;
+        }
+    }
+    &-videos {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: var(--space-l);
+        max-height: var(--project-content-height);
+        overflow-y: scroll;
+        padding: var(--space-l);
+    }
+}

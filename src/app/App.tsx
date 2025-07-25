@@ -1,5 +1,5 @@
 import { Router } from "@/components";
-import { ThemeProvider } from "@/contexts";
+import { HeaderProvider, ThemeProvider } from "@/contexts";
 
 import "./app.classes.scss";
 import "./app.keyframes.scss";
@@ -9,6 +9,8 @@ import "./app.scss";
 
 export const App = () => (
     <ThemeProvider>
-        <Router />
+        <HeaderProvider>
+            <Router />
+        </HeaderProvider>
     </ThemeProvider>
 );

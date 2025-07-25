@@ -36,6 +36,39 @@
         }
     }
 
+    button {
+        align-items: center;
+        animation: backgroundTitleAnim 20s linear alternate infinite;
+        background: linear-gradient(
+            90deg,
+            var(--clr-bg-secondary-03),
+            var(--clr-bg-secondary),
+            var(--clr-bg-secondary-02),
+            var(--clr-bg-secondary),
+            var(--clr-bg-secondary-05),
+            var(--clr-bg-secondary),
+            var(--clr-bg-secondary-02)
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-position: 0%;
+        background-size: 1000%;
+        cursor: pointer;
+        display: flex;
+        font-size: clamp(1.2em, 1.8vw, 2em);
+        font-weight: 900;
+        justify-content: center;
+        padding: var(--space-m) var(--space-xl);
+        text-transform: uppercase;
+        width: 100%;
+
+        &:hover {
+            background: var(--clr-bg-secondary);
+            background-clip: text;
+        }
+    }
+
     input,
     textarea {
         background-color: var(--clr-bg);

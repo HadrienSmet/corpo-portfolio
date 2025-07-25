@@ -1,45 +1,36 @@
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { LocaleSelect, Modal, MODAL_TYPES, Navigation, ThemeToggler } from "@/components";
+import { LOCKED_VIEW, useHeaderContext } from "@/contexts";
 
 import "./header.scss";
-
-type PropsType = {
-    readonly headerRef: RefObject<HTMLDivElement | null>;
-    readonly isNavOpen: boolean;
-};
-const useHeaderOnScroll = ({ headerRef, isNavOpen }: PropsType) => {
-    const [scrollY, setScrollY] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (headerRef.current !== null && window.scrollY < scrollY) {
-                headerRef.current.style.top = "0";
-            } else if (headerRef.current !== null && window.scrollY > scrollY) {
-                headerRef.current.style.top = "-104px";
-            }
-            setScrollY(window.scrollY);
-        };
-        if (!isNavOpen) window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [scrollY, headerRef, isNavOpen]);
-};
 
 export const Header = () => {
     const [shouldRender, setShouldRender] = useState(false);
     const [isNavOpen, setIsNavOpen] = useState(false);
 
     const buttonRef = useRef<HTMLButtonElement | null>(null);
-    const headerRef = useRef<HTMLDivElement | null>(null);
 
-    useHeaderOnScroll({ headerRef, isNavOpen });
+    const { headerRef, setLockedView } = useHeaderContext();
 
+    const onClose = () => {
+        setLockedView(undefined);
+        setIsNavOpen(false);
+    };
+    const onOpen = () => {
+        setLockedView(LOCKED_VIEW.show);
+        setIsNavOpen(true);
+    };
     const toggleExpansion = () => {
         if (!shouldRender) {
             setShouldRender(true);
         }
-        setIsNavOpen(state => !state);
+
+        if (isNavOpen) {
+            onClose();
+        } else {
+            onOpen();
+        }
     };
 
     useEffect(() => {
@@ -85,12 +76,12 @@ export const Header = () => {
 
             {shouldRender && (
                 <Modal
-                    close={toggleExpansion}
+                    close={onClose}
                     isOpen={isNavOpen}
                     type={MODAL_TYPES.right}
                 >
                     <Navigation
-                        close={() => setIsNavOpen(false)}
+                        close={onClose}
                         isOpen={isNavOpen}
                     />
                 </Modal>
