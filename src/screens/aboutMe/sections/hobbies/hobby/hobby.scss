@@ -1,0 +1,88 @@
+.hobby {
+    align-items: center;
+    color: var(--clr-txt);
+    display: flex;
+    font-family: --font-title;
+    font-size: 6vh;
+    height: 25vh;
+    letter-spacing: var(--space-xs);
+    overflow: hidden;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: var(--border-s);
+        background-color: var(--clr-bg-secondary);
+        transform: scaleX(0);
+        transition: 1s ease-out;
+        transform-origin: left;
+        z-index: 1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: var(--clr-bg);
+        transition: 0.25s ease-in-out;
+    }
+    &:hover {
+        &::after {
+            transform: translateY(-100%);
+        }
+        .hobby-content h3 {
+            color: var(--clr-txt-onBg);
+        }
+    }
+
+    &.visible {
+        &::before {
+            transform: scaleX(1);
+        }
+        .hobby-content h3 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    * {
+        pointer-events: none;
+    }
+
+    &-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            var(--clr-bg-secondary-03),
+            var(--clr-bg-secondary),
+            var(--clr-bg-secondary-05),
+            var(--clr-bg-secondary),
+            var(--clr-bg-secondary-05),
+            var(--clr-bg-secondary),
+            var(--clr-bg-secondary-05)
+        );
+        background-position: 0%;
+        background-size: 1000%;
+        animation: backgroundTitleAnim 20s linear alternate infinite;
+    }
+    &-content {
+        position: relative;
+        z-index: 1;
+        padding: 0 6vw;
+        h3 {
+            opacity: 0;
+            transform: translateY(50%);
+            transition: 0.5s ease-in-out;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}

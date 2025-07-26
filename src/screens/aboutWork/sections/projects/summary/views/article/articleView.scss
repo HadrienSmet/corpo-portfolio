@@ -4,7 +4,12 @@
         flex: 1;
         flex-direction: column;
         gap: var(--space-xh);
+        max-height: var(--project-content-height);
         padding: var(--space-xl);
+
+        em {
+            font-weight: 600;
+        }
     }
     &-description {
         display: flex;

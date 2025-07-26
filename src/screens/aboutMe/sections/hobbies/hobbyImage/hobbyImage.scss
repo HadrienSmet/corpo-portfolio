@@ -1,0 +1,10 @@
+.hobby-image {
+    opacity: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    &.is-active {
+        opacity: 1;
+    }
+}

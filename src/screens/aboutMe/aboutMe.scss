@@ -1,0 +1,50 @@
+.about-me {
+    h1 span {
+        font-family: --font-title;
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .my-description {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-size: 22px;
+        gap: var(--space-xl);
+        justify-content: center;
+        line-height: 1.5;
+        padding-inline: 20%;
+        width: 100%;
+    }
+    .personality-tests {
+        align-items: center;
+        display: flex;
+        gap: var(--space-xl);
+        justify-content: center;
+        margin-bottom: var(--space-giga);
+
+        a {
+            align-items: center;
+            background-color: var(--clr-bg-secondary);
+            border-radius: var(--radius-s);
+            color: var(--clr-txt-onBg);
+            cursor: pointer;
+            display: flex;
+            font-size: 18px;
+            font-weight: 600;
+            justify-content: center;
+            letter-spacing: 1.5px;
+            padding: var(--space-l) var(--space-h);
+            text-transform: uppercase;
+            transition: var(--transition-theme);
+            width: 180px;
+        }
+    }
+    .section-details {
+        display: flex;
+        flex-direction: column;
+        padding-inline: var(--space-giga);
+    }
+
+}

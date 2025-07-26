@@ -76,16 +76,16 @@ export const ProjectSummaryNavigation = ({ project, selectedId, setSelectedId }:
             selectedId={selectedId}
             setSelectedId={setSelectedId}
         />
-        {project.images && (
+        {project.videos && (
             <NavigationItem
-                id={NAVIGATION_SUMMARY.screenshots}
+                id={NAVIGATION_SUMMARY.videos}
                 selectedId={selectedId}
                 setSelectedId={setSelectedId}
             />
         )}
-        {project.videos && (
+        {project.images && (
             <NavigationItem
-                id={NAVIGATION_SUMMARY.videos}
+                id={NAVIGATION_SUMMARY.screenshots}
                 selectedId={selectedId}
                 setSelectedId={setSelectedId}
             />

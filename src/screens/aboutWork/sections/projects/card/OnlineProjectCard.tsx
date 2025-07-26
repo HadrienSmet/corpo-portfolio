@@ -1,4 +1,5 @@
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import { ProjectType } from "@/data";
 import { useElementVisibility, useWindowSize } from "@/hooks";
@@ -23,8 +24,6 @@ export const useProjectOnMouseMove = () => {
                 const y = e.clientY - rect.top;
                 const ratioX = -(x / rect.width) * 40 + 20;
                 const ratioY = -(y / rect.height) * 40 + 20;
-
-                console.log("Setting the trans!")
 
                 imgRef.current!.style.setProperty(
                     `--${imgRef.current?.id}-trans-x`,
@@ -58,8 +57,9 @@ type OnlineProjectCardProps = {
 };
 export const OnlineProjectCard = ({ project, onClick }: OnlineProjectCardProps) => {
     const { elementRef } = useElementVisibility({});
-    const { imgRef, onMouseEnter, onMouseLeave } =
-        useProjectOnMouseMove();
+    const { imgRef, onMouseEnter, onMouseLeave } = useProjectOnMouseMove();
+    const { t } = useTranslation();
+
     return (
         <div
             onClick={onClick}
@@ -73,12 +73,12 @@ export const OnlineProjectCard = ({ project, onClick }: OnlineProjectCardProps) 
                 ref={imgRef}
                 id={`${project.id}-img`}
                 src={`/images/projects/${project.id}/${project.imageLink}`}
-                alt={`Illustration du projet: ${project.name}`}
+                alt={t(`projects.cardAlt`, { name: t(`projects.online.${project.id}.name`) })}
                 width={IMAGE_SIZE}
                 height={IMAGE_SIZE}
             />
             <div className="online-project__card-content ">
-                <h3>{project.name}</h3>
+                <h3>{t(`projects.online.${project.id}.name`)}</h3>
                 <ul>
                     {project.tools.map((tool) => (
                         <li key={tool}>{tool}</li>

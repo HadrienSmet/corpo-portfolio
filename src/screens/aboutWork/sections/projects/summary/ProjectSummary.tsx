@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Github, Internet } from "@/assets";
@@ -24,6 +24,13 @@ export const ProjectSummary = ({ close, isOpen, projectId }: ProjectSummaryProps
     const project = useMemo(() => ONLINE_PROJECTS[projectId], [projectId]);
 
     const [year, month] = project.period.split("/");
+    const i18nPrefix = `projects.online.${project.id}`;
+
+    useEffect(() => {
+        if (isOpen) {
+            setSelectedId(NAVIGATION_SUMMARY.article);
+        }
+    }, [isOpen]);
 
     return (
         <Modal
@@ -33,7 +40,7 @@ export const ProjectSummary = ({ close, isOpen, projectId }: ProjectSummaryProps
         >
             <div className={`project-summary ${isOpen ? "visible" : ""}`}>
                 <div className="project-summary-header">
-                    <h3>{project.name}</h3>
+                    <h3>{t(`${i18nPrefix}.name`)}</h3>
                     <span>{t(`months.${month}`)} {year}</span>
                 </div>
                 <div className="project-summary-body">

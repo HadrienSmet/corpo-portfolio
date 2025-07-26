@@ -3,8 +3,8 @@ export type JobItem = {
     readonly descriptionsAmount: number;
     readonly id: string;
     readonly period: {
-        start: string;
-        end?: string;
+        readonly end?: string;
+        readonly start: string;
     };
     readonly stacks: Array<string>;
     readonly title: string;

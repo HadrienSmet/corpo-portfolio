@@ -1,4 +1,5 @@
 import { ReactNode, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { Hiking, Home, Work } from "@/assets";
@@ -41,6 +42,7 @@ type NavigationProps = {
 };
 export const Navigation = ({ close, isOpen }: NavigationProps) => {
     const txtOnBg = useCssVariable("--clr-txt-onBg");
+    const { t } = useTranslation();
 
     const NAVIGATION = [
         {
@@ -48,7 +50,7 @@ export const Navigation = ({ close, isOpen }: NavigationProps) => {
             item: (
                 <>
                     <Home color={txtOnBg} />
-                    <p>Home</p>
+                    <p>{t("routes.home")}</p>
                 </>
             ),
         },
@@ -57,7 +59,7 @@ export const Navigation = ({ close, isOpen }: NavigationProps) => {
             item: (
                 <>
                     <Work color={txtOnBg} />
-                    <p>About my work</p>
+                    <p>{t("routes.aboutWork")}</p>
                 </>
             ),
         },
@@ -66,7 +68,7 @@ export const Navigation = ({ close, isOpen }: NavigationProps) => {
             item: (
                 <>
                     <Hiking color={txtOnBg} />
-                    <p>About me</p>
+                    <p>{t("routes.aboutMe")}</p>
                 </>
             ),
         },

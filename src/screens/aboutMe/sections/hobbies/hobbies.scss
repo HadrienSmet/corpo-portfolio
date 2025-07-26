@@ -1,0 +1,22 @@
+.hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        &:hover .hobby {
+            color: var(--clr-bg-secondary-05);
+        }
+    }
+    &-pictures {
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}

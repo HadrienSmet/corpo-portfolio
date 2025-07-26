@@ -5,6 +5,14 @@
         gap: var(--space-h);
         padding: var(--space-l);
 
+        &-title {
+            font-weight: 600;
+            margin-bottom: var(--space-m);
+        }
+        &-description {
+            padding-left: var(--space-m);
+        }
+
         p {
             line-height: 1.5;
         }

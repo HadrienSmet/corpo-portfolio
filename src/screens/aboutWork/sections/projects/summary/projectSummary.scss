@@ -1,5 +1,5 @@
 .project-summary {
-    --project-content-height: calc(90vh - 153.5px);
+    --project-content-height: calc(90vh - 142.5px);
 
     align-items: center;
     background-color: var(--clr-bg);
@@ -66,11 +66,14 @@
         display: flex;
         gap: var(--space-l);
         justify-content: center;
+        padding-top: var(--space-m);
 
         a {
             align-items: center;
             display: flex;
+            font-weight: 600;
             gap: var(--space-m);
+            letter-spacing: 1px;
         }
     }
     &-views {
