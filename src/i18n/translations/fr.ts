@@ -76,6 +76,8 @@ export const fr = {
             "11": "Novembre",
             "12": "Décembre",
         },
+        periodWithEnd: "Du {{start}} au {{end}}",
+        periodWithoutEnd: "Du {{start}} jusqu'à maintenant",
         profession: "Développeur full stack",
         projects: {
             article: "Article",
@@ -96,7 +98,7 @@ export const fr = {
                     descriptions: {
                         "0": "J’ai réalisé ce projet pour approfondir ma compréhension des WebSockets et explorer les interactions en temps réel sur le web. Cloner le célèbre jeu Gartic Phone m’a offert un défi à la fois amusant et technique, tout en m’inspirant de références de design professionnels.",
                         "1": "Ce projet m’a permis de renforcer mes compétences en gestion de données en temps réel, logique multijoueur et synchronisation des états de jeu. L'application est entièrement responsive, même si le jeu nécessite pour l'instant l'utilisation d'une souris pour dessiner. Un seul outil de dessin et un mode de jeu sont disponibles à ce stade.",
-                        "2": "Développé il y a plus de deux ans, la version déployée semble actuellement cassé. Je devrai investiguer pour la remettre en état dès que j'aurai un peu de temps.",
+                        "2": "Développé il y a plus de deux ans, la version déployée semble actuellement cassée. Je devrai investiguer pour la remettre en état dès que j'aurai un peu de temps.",
                     },
                     name: "Clone de Gartic Phone – Quatrième projet personnel",
                 },

@@ -76,6 +76,8 @@ export const en = {
             "11": "November",
             "12": "December",
         },
+        periodWithEnd: "From {{start}} to {{end}}",
+        periodWithoutEnd: "From {{start}} until now",
         profession: "Full stack developper",
         projects: {
             article: "Article",

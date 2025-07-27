@@ -1,55 +1,33 @@
-import { useMemo } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { useElementVisibility } from "@/hooks";
-import { JobItem, JOBS } from "@/data";
+import { Carousel } from "@/components";
+import { Experience, EXPERIENCE_TYPE, JOBS } from "@/data";
+import { useElementVisibility, useWindowSize } from "@/hooks";
 
+import { ExperienceCard, FutureExperienceCard } from "./card";
 import "./sectionJobs.scss";
 
-const JobCard = (props: JobItem) => {
+const SPACE_UPPON_CAROUSEL = 162 as const;
+
+export const SectionJobs = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
     const { elementRef } = useElementVisibility({});
+    const { height, width } = useWindowSize();
     const { t } = useTranslation();
 
-    const descriptions = useMemo(() => {
-        const output: Array<string> = [];
+    const onClick = (num: number) => setActiveIndex(num);
 
-        for (let i = 0; i <= props.descriptionsAmount; i++) {
-            const description = t(`experiences.${props.id}.descriptions.${i}`);
+    const itemHeight = Math.min((height * .95)- (SPACE_UPPON_CAROUSEL + (12*2)), 750);
 
-            output.push(description);
+    const renderItem = (exp: Experience) => {
+        if (exp.type === EXPERIENCE_TYPE.past) {
+            return (<ExperienceCard {...exp.item} itemHeight={itemHeight} />);
         }
 
-        return (output);
-    }, [t])
-
-    return (
-        <div ref={elementRef} className="job-card">
-            <div className="job-card__header">
-                <div className="job-card__company">
-                    <div className="job-card__company-logo">
-                        <img
-                            src={`/images/${props.id}/${props.id}-logo.webp`}
-                            alt={`Logo ${props.company}`}
-                        />
-                    </div>
-                    <p>{props.company}</p>
-                </div>
-                <p>{props.period.start} to {props.period.end ?? "now"}</p>
-
-            </div>
-            <div className="job-card__content">
-                <h3>{t(`experiences.${props.id}.title`)}</h3>
-                <em>{props.stacks.join(", ")}.</em>
-                <div className="job-card__descriptions">
-                    {descriptions.map((description, index) => <p key={`${props.id}-${index}`}>{description}</p>)}
-                </div>
-            </div>
-        </div>
-    );
-};
-export const SectionJobs = () => {
-    const { elementRef } = useElementVisibility({});
-    const { t } = useTranslation();
+        return (<FutureExperienceCard {...exp.item} itemHeight={itemHeight} />);
+    };
 
     return (
         <section
@@ -58,9 +36,15 @@ export const SectionJobs = () => {
         >
             <h2>{t("experiences.title")}</h2>
             <div className="experiences-container">
-                {JOBS.map(job => <JobCard key={job.company} {...job} />)}
+                <Carousel
+                    items={JOBS}
+                    itemHeight={itemHeight}
+                    itemWidth={Math.min(width*.6, 1050)}
+                    index={activeIndex}
+                    onClick={onClick}
+                    renderItem={renderItem}
+                />
             </div>
-            <p>{t("experiences.future")}</p>
         </section>
     );
 };

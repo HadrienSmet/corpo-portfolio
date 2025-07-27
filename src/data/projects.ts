@@ -52,7 +52,7 @@ export const ONLINE_PROJECTS: Record<string, ProjectType> = {
         tools: ["Sass", "React", "TypeScript"],
     },
     gartic: {
-        descriptionsSegments: 2,
+        descriptionsSegments: 3,
         id: "gartic",
         images: [
             {
