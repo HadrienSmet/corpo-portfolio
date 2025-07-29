@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 
 import { SCALE } from "./carousel.constants";
 import { CarouselItem } from "./item";
-import "./Carousel.scss";
+import "./carousel.scss";
 
 const PADDING_INLINE = 16 as const;
 
