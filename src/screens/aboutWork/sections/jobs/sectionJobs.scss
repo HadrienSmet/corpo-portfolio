@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 100vh;
-    height: unset;
+    min-height: unset;
     padding-block: var(--space-giga);
 
     &.visible {
@@ -27,6 +26,7 @@
 
     h2 {
         opacity: 0;
+        padding-inline: var(--space-giga);
         transform: translateX(-20px);
         transition: 0.35s;
     }

@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 
+import { SCALE } from "./carousel.constants";
 import { CarouselItem } from "./item";
 import "./Carousel.scss";
 
-const PADDING_INLINE = 12 as const;
+const PADDING_INLINE = 16 as const;
 
 type CarouselProps<T> = {
     readonly index: number;
@@ -52,7 +53,7 @@ export const Carousel = <T,>({
         return () => container.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const wrapperHeight = (itemHeight) + (2*PADDING_INLINE);
+    const wrapperHeight = (itemHeight * SCALE.max) + (16 + 2 + 8);
 
     return (
         <div

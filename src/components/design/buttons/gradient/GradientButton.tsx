@@ -50,7 +50,8 @@ const useGradientButton = (): RefObject<HTMLDivElement | null> => {
 type GradientButtonProps =
     | {
         readonly label: string;
-        readonly onClick: () => void;
+        readonly onClick?: () => void;
+        readonly type?: "submit"
     }
     | PropsWithChildren;
 export const GradientButton = (props: GradientButtonProps) => {
@@ -59,7 +60,7 @@ export const GradientButton = (props: GradientButtonProps) => {
     return (
         <div ref={ref} className="gradient">
             {"label" in props
-                ? (<button onClick={props.onClick}>{props.label}</button>)
+                ? (<button onClick={props.onClick} type={props.type}>{props.label}</button>)
                 : (props.children)
             }
         </div>

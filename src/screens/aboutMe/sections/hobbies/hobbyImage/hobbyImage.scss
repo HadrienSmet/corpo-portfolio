@@ -1,9 +1,8 @@
 .hobby-image {
     opacity: 0;
-    position: absolute;
-    width: auto;
-    height: auto;
     pointer-events: none;
+    position: absolute;
+
     &.is-active {
         opacity: 1;
     }

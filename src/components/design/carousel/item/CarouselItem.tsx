@@ -1,20 +1,7 @@
 import { RefObject, useMemo } from "react";
 
+import { OPACITY, SCALE, TRANSLATE_Y } from "../carousel.constants";
 import "./carouselItem.scss";
-
-const OPACITY = {
-    max: 0,
-    min: 1,
-} as const;
-export const SCALE = {
-    max: 1,
-    min: 0.5,
-} as const;
-/** Refers to a percentage */
-const TRANSLATE_Y = {
-    max: 0,
-    min: -2,
-} as const;
 
 /**
  * @param minValue value returned when item is far from the center
@@ -94,7 +81,7 @@ export const CarouselItem = <T,>({
             onClick={() => onClick?.(i)}
             style={{
                 ...transformStyles.item,
-                minHeight: itemHeight,
+                height: itemHeight,
                 minWidth: itemWidth,
                 width: itemWidth,
             }}
@@ -102,7 +89,7 @@ export const CarouselItem = <T,>({
             <div
                 className="carousel-item__content"
                 style={{
-                    minHeight: itemHeight,
+                    height: itemHeight,
                     minWidth: itemWidth,
                     width: itemWidth,
                 }}
@@ -111,7 +98,10 @@ export const CarouselItem = <T,>({
             </div>
             <div
                 className="carousel-item__filter"
-                style={transformStyles.filter}
+                style={{
+                    ...transformStyles.filter,
+                    height: itemHeight,
+                }}
             />
         </div>
     );

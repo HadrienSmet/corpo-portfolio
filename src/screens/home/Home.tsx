@@ -5,12 +5,10 @@ import "./home.scss";
 
 
 export const Home = () => (
-    <>
-        <div className="home">
-            <ThemedInkBackground parentClassName="home" />
-            <SectionIntro />
-            <SectionAbout />
-            <SectionContact />
-        </div>
-    </>
+    <div className="home">
+        <ThemedInkBackground parentClassName="home" />
+        <SectionIntro />
+        <SectionAbout />
+        <SectionContact />
+    </div>
 );

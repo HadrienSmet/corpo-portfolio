@@ -49,4 +49,3 @@ export const ThemedInkBackground = ({ parentClassName }: ThemedInkBackgroundProp
         </BackgroundLayout>
     );
 };
-// 1648x874

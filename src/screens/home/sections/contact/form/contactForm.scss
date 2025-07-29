@@ -91,3 +91,51 @@
         transform: translateX(-20px);
     }
 }
+
+.notification {
+    align-items: center;
+    background-color: var(--clr-bg);
+    box-shadow: var(--shadow-default) var(--clr-txt-04);
+    display: flex;
+    gap: var(--space-l);
+    opacity: 0;
+    padding: var(--space-l);
+    position: absolute;
+    transform: translateX(20%);
+    transition: 0.4s ease-in-out;
+    right: var(--space-h);
+    width: 450px;
+
+    &.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    &.error {
+        background-color: rgb(255, 201, 201);
+        * {
+            color: red;
+        }
+    }
+    &.success {
+        background-color: rgb(206, 255, 201);
+        * {
+            color: green;
+        }
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: var(--space-giga) var(--space-xl);
+    }
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-m);
+        line-height: 1.5;
+    }
+    &-title {
+        font-weight: 600;
+    }
+}

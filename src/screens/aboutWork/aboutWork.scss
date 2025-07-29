@@ -1,7 +1,6 @@
 .about-work {
     display: flex;
     flex-direction: column;
-    padding-inline: var(--space-giga);
 
     h1 span {
         font-family: --font-title;
@@ -10,6 +9,29 @@
     h1 {
         animation: appearFromLeft 0.3s ease-in-out 0.35s forwards;
         opacity: 0;
+        padding-inline: var(--space-giga);
         transform: translateX(-20px);
+    }
+
+    &-background {
+        left: calc(100vw - 300px);
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 250px;
+
+        rotate: 20;
+
+        &.visible {
+            animation: increaseOpacity 1s ease-in forwards;
+        }
+    }
+    &-page {
+        background-color: var(--clr-bg);
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        position: relative;
+        z-index: -1;
     }
 }

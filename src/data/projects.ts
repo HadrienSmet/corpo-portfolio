@@ -85,14 +85,14 @@ export const ONLINE_PROJECTS: Record<string, ProjectType> = {
         comingSoonSegments: 4,
         descriptionsSegments: 3,
         id: "leonorapp",
-        imageLink: "leonor-app_0.png",
+        imageLink: "leonor-app_0.webp",
         images: [
             {
-                url: "leonor-app_0.png",
+                url: "leonor-app_0.webp",
                 id: "folders",
             },
             {
-                url: "leonor-app_1.png",
+                url: "leonor-app_1.webp",
                 id: "vocabulary",
             },
         ],

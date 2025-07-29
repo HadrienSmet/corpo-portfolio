@@ -12,11 +12,11 @@ export const HOBBIES = {
     "2": {
         id: "pop",
         index: 2,
-        url: "hobby-learn.webp",
+        url: "hobby-pop.webp",
     },
     "3": {
         id: "others",
         index: 3,
-        url: "hobby-philo.webp",
+        url: "hobby-others.webp",
     },
 };

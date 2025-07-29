@@ -6,7 +6,7 @@ import { useLocale } from "@/hooks";
 import { Hobbies } from "./sections";
 import "./aboutMe.scss";
 
-const DESCRIPTION_SEGMENTS = 3 as const;
+const DESCRIPTION_SEGMENTS = 4 as const;
 export const AboutMe = () => {
     const { locale } = useLocale();
     const { t } = useTranslation();

@@ -13,8 +13,9 @@ export const en = {
                 },
                 description: {
                     "0": "Hi! I am a full stack developer living in Brussels. My native language is French but I also speak fluently English and I understand Dutch.",
-                    "1": "I love traveling and discovering new cultures, and I hope to have the opportunity to live and work abroad one day. In addition to web development, I enjoy learning new things, and reading philosophy.",
-                    "2": "I am a positive, optimistic, and dynamic person, always ready to tackle new challenges and learn new things. I am excited to use my skills and enthusiasm to serve a company and work on exciting projects.",
+                    "1": "I started learning web development on my own four years ago, studying in the evenings after work. I quickly discovered a new passion for it!",
+                    "2": "I love traveling and discovering new cultures, and I hope to have the opportunity to live and work abroad one day. In addition to web development, I enjoy learning new things, and reading philosophy.",
+                    "3": "I am a positive, optimistic, and dynamic person, always ready to tackle new challenges and learn new things. I am excited to use my skills and enthusiasm to serve a company and work on exciting projects.",
                 },
                 hobbies: {
                     code: "Coding",
@@ -45,6 +46,16 @@ export const en = {
                 message: "Message",
                 name: "Name",
                 submit: "Send",
+            },
+            notifications: {
+                error: {
+                    message: "<default>Oops.. Feel free to contact me at <strong>hadriensmet96@gmail.com</strong> or via LinkedIn 😊",
+                    title: "An error occurred while sending the email"
+                },
+                success: {
+                    message: "Thank you for your consideration! I’ll do my best to get back to you as soon as possible 😊",
+                    title: "Email successfully send"
+                },
             },
             subtitle: "Get in touch with me via social media or mail",
             title: "Wants to work together?",

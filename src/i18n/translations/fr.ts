@@ -12,9 +12,10 @@ export const fr = {
                     title: "<default>Plus sur <styled>moi</styled></default>",
                 },
                 description: {
-                    "0": "Salut ! Je suis développeur full stack et je vis à Bruxelles. Le français est ma langue maternelle, mais je parle aussi couramment anglais et je comprends le néerlandais.",
-                    "1": "J’adore voyager et découvrir de nouvelles cultures, et j’espère avoir un jour l’opportunité de vivre et travailler à l’étranger. En plus du développement web, j’aime apprendre de nouvelles choses et lire de la philosophie.",
-                    "2": "Je suis une personne positive, optimiste et dynamique, toujours prête à relever de nouveaux défis et à apprendre. Je suis enthousiaste à l’idée de mettre mes compétences et mon énergie au service d’une entreprise et de projets passionnants.",
+                    "0": "Salut ! Je suis un développeur full stack vivant à Bruxelles. Le français est ma langue maternelle, mais je parle aussi couramment anglais et je comprends le néerlandais.",
+                    "1": "J'ai commencé à apprendre le développement web il y a 4 ans par moi-même le soir en rentrant du travail. Et je me suis très vite découvert une nouvelle passion !",
+                    "2": "J’adore voyager et découvrir de nouvelles cultures, et j’espère avoir un jour l’opportunité de vivre et travailler à l’étranger. En plus du développement web, j’aime apprendre de nouvelles choses et lire de la philosophie.",
+                    "3": "Je suis une personne positive, optimiste et dynamique, toujours prête à relever de nouveaux défis et à apprendre. Je suis enthousiaste à l’idée de mettre mes compétences et mon énergie au service d’une entreprise et de projets passionnants.",
                 },
                 hobbies: {
                     code: "Coder",
@@ -45,6 +46,16 @@ export const fr = {
                 message: "Message",
                 name: "Nom",
                 submit: "Envoyer",
+            },
+            notifications: {
+                error: {
+                    message: "<default>Oups.. Contactez-moi à l'adresse <strong>hadriensmet96@gmail.com</strong> ou via LinkedIn 😊",
+                    title: "Une erreur est survenue lors de l'envoie du mail",
+                },
+                success: {
+                    message: "Merci pour votre considération! Je tâcherai de vous répondre dans les plus brefs délais 😊",
+                    title: "Email envoyé avec succès",
+                }
             },
             subtitle: "Contactes-moi par email ou via mes réseaux sociaux",
             title: "Envie de travailler ensemble ?",
