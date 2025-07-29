@@ -2,7 +2,7 @@ import { RefObject, useEffect, useRef } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
-import { GlowingButton, ROUTES } from "@/components";
+import { getLocalizedPath, GlowingButton, ROUTES } from "@/components";
 import { useElementVisibility, useWindowSize } from "@/hooks";
 
 import { useDoubleImageDimensions } from "../useDoublieImageDimensions";
@@ -22,7 +22,7 @@ const DetailCard = ({ details, dynamicClass, ref, title, to }: DetailCardProps) 
         ref={ref}
     >
         <Link
-            to={to}
+            to={getLocalizedPath(to)}
             className={dynamicClass}
         >
             <Trans
@@ -63,14 +63,11 @@ const useDetailsOnMouseMove = () => {
             }
         };
 
-        if (width && width > 1025) {
-            window.addEventListener("mousemove", handlePictureOnMouseMove);
-        }
+        window.addEventListener("mousemove", handlePictureOnMouseMove);
 
-        if (width && width < 1025) {
-            myWorkRef.current?.classList.add("visible");
-            myRef.current?.classList.add("visible");
-        }
+        myWorkRef.current?.classList.add("visible");
+        myRef.current?.classList.add("visible");
+
         return () => {
             window.removeEventListener("mousemove", handlePictureOnMouseMove);
         };

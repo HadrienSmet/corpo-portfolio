@@ -76,6 +76,15 @@ const useImageMouseMove = () => {
         };
     }, [windowWidth]);
 
+    useEffect(() => {
+        handleContainersWidth(
+            50,
+            firstImgContainerRef,
+            secondImgContainerRef,
+        );
+        handleDoubleImageTranslateX(50, doubleImgRef);
+    }, []);
+
     return ({
         doubleImgRef,
         firstImgContainerRef,

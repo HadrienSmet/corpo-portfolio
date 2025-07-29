@@ -6,6 +6,7 @@ import { Hiking, Home, Work } from "@/assets";
 import { useCssVariable } from "@/hooks";
 
 import { ROUTES } from "../routes";
+import { getLocalizedPath } from "../router.utils";
 
 import "./navigation.scss";
 
@@ -29,7 +30,7 @@ const NavigationButton = (elem: {
                 ref.current?.classList.add("default")
             }}
             ref={ref}
-            to={elem.route}
+            to={getLocalizedPath(elem.route)}
         >
             {elem.item}
         </Link>

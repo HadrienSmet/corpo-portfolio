@@ -7,12 +7,14 @@ import { Select } from "../core";
 
 type LocaleSelectProps = {
     readonly onBackground?: boolean;
-}
+};
 export const LocaleSelect = ({ onBackground = false }: LocaleSelectProps) => {
     const { locale, setLocale } = useLocale();
 
     const onChange = (event: ChangeEvent<HTMLSelectElement>) => setLocale(event.target.value);
-    const options = useMemo(() => Object.keys(SUPPORTED_LANGUAGES).map(lang => ({ value: lang, label: lang.toUpperCase() })), [SUPPORTED_LANGUAGES])
+    const options = useMemo(() => (
+        Object.keys(SUPPORTED_LANGUAGES).map(lang => ({ value: lang, label: lang.toUpperCase() }))
+    ), [SUPPORTED_LANGUAGES]);
 
     return (
         <Select

@@ -9,7 +9,11 @@ export const SectionContact = () => {
 
     return (
         <section id="contact" className="contact">
-            <img className="contact-background" src="images/backgrounds/grunge-pattern.webp" />
+            <img
+                alt="Contact section's background"
+                className="contact-background"
+                src="/images/backgrounds/grunge-pattern.webp"
+            />
             <div className="contact-content"  ref={elementRef}>
                 <ContactHeader />
                 <ContactForm />
