@@ -58,7 +58,7 @@ export const ContactHeader = () => {
                     <Facebook color={mainText} />
                 </a>
                 <a
-                    href="/docs/cv_hadrien-smet_full-stack-developper.pdf"
+                    href="/docs/cv_hadrien-smet_fullstack-developer.pdf"
                     download
                 >
                     {t("contact.curriculum")}
