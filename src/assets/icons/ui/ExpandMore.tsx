@@ -6,7 +6,7 @@ export const ExpandMore = ({ color, size = DEFAULT_SIZE }: IconProps) => (
         fill={color}
         height={size}
         stroke={color}
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 24 24"
         width={size}
         xmlns="http://www.w3.org/2000/svg"

@@ -6,7 +6,7 @@ export const Report = ({ color, dynamicClass = "", size = DEFAULT_SIZE }: IconPr
         className={dynamicClass}
         stroke={color}
         fill={color}
-        stroke-width="0"
+        strokeWidth="0"
         viewBox="0 0 24 24"
         height={size}
         width={size}

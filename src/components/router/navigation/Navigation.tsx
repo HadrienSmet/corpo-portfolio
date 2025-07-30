@@ -78,7 +78,7 @@ export const Navigation = ({ close, isOpen }: NavigationProps) => {
     return (
         <div className={`navigation ${isOpen ? "opened": "closed"}`}>
             {NAVIGATION.map(elem => (
-                <NavigationButton {...elem} close={close} />
+                <NavigationButton key={elem.route} {...elem} close={close} />
             ))}
         </div>
     );
