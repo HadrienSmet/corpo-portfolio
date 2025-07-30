@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useParams, useLocation } from "react-router";
+
 export const useLocale = () => {
-    const { i18n } = useTranslation();
-    const { locale = "en" } = useParams();
     const location = useLocation();
     const navigate = useNavigate();
+    const { locale = "en" } = useParams();
+    const { i18n } = useTranslation();
 
     useEffect(() => {
         if (i18n.language !== locale) {
@@ -16,9 +17,9 @@ export const useLocale = () => {
     const setLocale = (newLocale: string) => {
         if (newLocale === locale) return;
 
-        const splitted = location.pathname.split("/");
+        const [_, __, pageName] = location.pathname.split("/");
 
-        navigate(`/${newLocale}/${splitted.length > 2 ? splitted[splitted.length-1] : ""}`, { replace: true });
+        navigate(`/${newLocale}/${pageName ?? ""}`, { replace: true });
     };
 
     return ({
