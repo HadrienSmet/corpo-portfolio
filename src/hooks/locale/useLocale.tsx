@@ -18,7 +18,7 @@ export const useLocale = () => {
 
         const splitted = location.pathname.split("/");
 
-        navigate(`/${newLocale}/${splitted[splitted.length-1]}`, { replace: true });
+        navigate(`/${newLocale}/${splitted.length > 2 ? splitted[splitted.length-1] : ""}`, { replace: true });
     };
 
     return ({

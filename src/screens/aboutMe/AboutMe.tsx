@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { useLocale } from "@/hooks";
@@ -8,17 +8,19 @@ import "./aboutMe.scss";
 
 const DESCRIPTION_SEGMENTS = 4 as const;
 export const AboutMe = () => {
+    const [myDescription, setMyDescription] = useState<Array<ReactNode>>([]);
+
     const { locale } = useLocale();
     const { t } = useTranslation();
 
-    const myDescription = useMemo(() => {
+    useEffect(() => {
         const output: Array<ReactNode> = [];
 
         for (let i = 0; i < DESCRIPTION_SEGMENTS; i++) {
             output.push(<p key={`my-description-${i}`}>{t(`about.me.description.${i}`)}</p>);
         }
 
-        return (output);
+        setMyDescription(output);
     }, [locale]);
 
     return (
