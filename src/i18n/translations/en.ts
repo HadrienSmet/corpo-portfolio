@@ -58,7 +58,7 @@ export const en = {
                 },
             },
             subtitle: "Get in touch with me via social media or mail",
-            title: "Wants to work together?",
+            title: "Do you want to work together?",
         },
         experiences: {
             future: "You might be the next one!",
@@ -89,7 +89,7 @@ export const en = {
         },
         periodWithEnd: "From {{start}} to {{end}}",
         periodWithoutEnd: "From {{start}} until now",
-        profession: "Full stack developper",
+        profession: "Full stack developer",
         projects: {
             article: "Article",
             cardAlt: "Illustration of the projet: {{name}}",
