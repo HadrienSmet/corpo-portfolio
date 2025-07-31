@@ -33,18 +33,6 @@ export const AboutMe = () => {
                 <div className="my-description">
                     {myDescription}
                 </div>
-                <div className="personality-tests">
-                    <a
-                        href="https://drive.google.com/file/d/1-QeTq0lufeknbFwk2UyQT3n9cbgYitUm/view?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >MBTI</a>
-                    <a
-                        href="https://drive.google.com/file/d/1t7oAlXpJPd9hf5D8XtfAjNhEVxJVACWR/view?usp=sharing"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >Talents</a>
-                </div>
                 <h2>{t("about.me.hobbies.title")}</h2>
             </section>
             <Hobbies />

@@ -5,8 +5,6 @@ export const en = {
                 card: {
                     items: {
                         hobbies: "Some hobbies",
-                        personnalityTests: "Personnality tests",
-                        pictures: "Some pictures",
                         softSkills: "Soft skills",
                     },
                     title: "<default>More about <styled>me</styled></default>",

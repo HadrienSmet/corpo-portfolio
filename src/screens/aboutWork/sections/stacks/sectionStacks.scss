@@ -37,4 +37,13 @@
             }
         }
     }
+    .stack-label {
+        background-color: var(--clr-bg);
+        border-radius: var(--radius-s);
+        box-shadow: var(--shadow-default) var(--clr-bg-secondary-05);
+        padding: var(--space-l) var(--space-h);
+        pointer-events: none;
+        position: fixed;
+        z-index: 2;
+    }
 }

@@ -28,6 +28,12 @@
         transition: var(--transition-onClick) ease-out;
         width: 100%;
 
+        .gradient {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: var(--transition-hover);
+        }
+
         &.visible {
             opacity: 1;
             transform: scale(1) translateY(0);

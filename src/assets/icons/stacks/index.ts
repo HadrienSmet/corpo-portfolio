@@ -7,6 +7,5 @@ export * from "./NodeJs";
 export * from "./PostgreSql";
 export * from "./React";
 export * from "./Sass";
-export * from "./SocketIo";
 export * from "./TypeScript";
 export * from "./VueJs";

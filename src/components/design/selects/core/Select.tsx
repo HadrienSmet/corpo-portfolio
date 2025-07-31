@@ -1,7 +1,6 @@
 import { ChangeEventHandler, CSSProperties } from "react";
 
 import { ExpandMore } from "@/assets";
-import { useCssVariable } from "@/hooks";
 
 import "./select.scss";
 
@@ -22,17 +21,14 @@ type SelectProps = {
     readonly onChange: ChangeEventHandler<HTMLSelectElement>;
 };
 export const Select = ({ onBackground = false, ...props }: SelectProps) => {
-    const onBgColor = useCssVariable("--clr-txt-onBg");
-
     const iconColor = onBackground
-        ? onBgColor
+        ? "white"
         : undefined;
 
     return (
         <div className="select-container">
             <select
                 className={`${props.className ?? ""} ${onBackground ? "on-background" : ""} input`}
-                defaultValue={props.value}
                 value={props.value}
                 disabled={props.disabled ?? false}
                 id={props.id}

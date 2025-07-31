@@ -58,9 +58,7 @@ export const DetailsContainer = () => {
         {
             details: [
                 t("about.me.card.items.softSkills"),
-                t("about.me.card.items.pictures"),
                 t("about.me.card.items.hobbies"),
-                t("about.me.card.items.personnalityTests"),
             ],
             dynamicClass: "details-about-me",
             title: t("about.me.card.title"),

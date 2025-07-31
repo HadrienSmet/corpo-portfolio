@@ -5,8 +5,6 @@ export const fr = {
                 card: {
                     items: {
                         hobbies: "Quelques hobbies",
-                        personnalityTests: "Tests de personnalité",
-                        pictures: "Quelques photos",
                         softSkills: "Soft skills",
                     },
                     title: "<default>Plus sur <styled>moi</styled></default>",
@@ -73,7 +71,7 @@ export const fr = {
             },
             title: "Expériences professionnelles",
         },
-        learnMore: "Cliques pour en apprendre plus",
+        learnMore: "Cliquez pour en apprendre plus",
         months: {
             "01": "Janvier",
             "02": "Février",

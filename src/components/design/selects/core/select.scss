@@ -7,7 +7,6 @@ select {
 .select-container {
     align-items: center;
     display: flex;
-    // min-width: 60px;
     position: relative;
 
     select {
@@ -15,8 +14,8 @@ select {
         width: 100%;
 
         &.on-background {
-            color: var(--clr-txt-onBg);
-            background-color: var(--clr-bg-03);
+            color: white;
+            background-color: #484849;
         }
     }
 

@@ -12,9 +12,6 @@
     border: var(--border-m) solid transparent;
     border-radius: var(--radius-s);
     box-shadow: 0px 2px 6px 1px var(--clr-bg-secondary-02);
-    opacity: 0;
-    transform: translateY(10px);
-    transition: var(--transition-hover);
     &:hover {
         background: linear-gradient(var(--clr-bg), var(--clr-bg)), linear-gradient(var(--clr-bg-secondary), var(--clr-bg-secondary));
         background-clip: padding-box, border-box;
