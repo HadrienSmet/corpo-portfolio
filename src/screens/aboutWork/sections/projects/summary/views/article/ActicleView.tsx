@@ -4,14 +4,12 @@ import { useTranslation } from "react-i18next";
 import { ProjectType } from "@/data";
 
 import "./articleView.scss";
-import { useLocale } from "@/hooks";
 
 export const ArticleView = ({ project }: { project: ProjectType; }) => {
     const [description, setDescription] = useState<Array<ReactNode>>([]);
     const [comingSoon, setComingSoon] = useState<Array<ReactNode>>([]);
 
-    const { locale } = useLocale();
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     const i18nPrefix = `projects.online.${project.id}`;
 
@@ -42,7 +40,7 @@ export const ArticleView = ({ project }: { project: ProjectType; }) => {
 
         handleComingSoon();
         handleDescription();
-    }, [locale, project]);
+    }, [i18n.language, project]);
     return (
         <div className="project-summary-data">
             <em>{project.tools.join(", ")}.</em>

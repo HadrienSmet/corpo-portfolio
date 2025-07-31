@@ -1,8 +1,6 @@
 import { ReactNode, useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 
-import { useLocale } from "@/hooks";
-
 import { Hobbies } from "./sections";
 import "./aboutMe.scss";
 
@@ -10,8 +8,7 @@ const DESCRIPTION_SEGMENTS = 4 as const;
 export const AboutMe = () => {
     const [myDescription, setMyDescription] = useState<Array<ReactNode>>([]);
 
-    const { locale } = useLocale();
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     useEffect(() => {
         const output: Array<ReactNode> = [];
@@ -21,7 +18,7 @@ export const AboutMe = () => {
         }
 
         setMyDescription(output);
-    }, [locale]);
+    }, [i18n.language]);
 
     return (
         <div className="about-me">

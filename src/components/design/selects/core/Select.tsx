@@ -11,7 +11,7 @@ type SelectOption = {
 };
 type SelectProps = {
     readonly className?: string;
-    readonly defaultValue?: string;
+    readonly value?: string;
     readonly disabled?: boolean;
     readonly id?: string;
     readonly name: string;
@@ -32,7 +32,8 @@ export const Select = ({ onBackground = false, ...props }: SelectProps) => {
         <div className="select-container">
             <select
                 className={`${props.className ?? ""} ${onBackground ? "on-background" : ""} input`}
-                defaultValue={props.defaultValue}
+                defaultValue={props.value}
+                value={props.value}
                 disabled={props.disabled ?? false}
                 id={props.id}
                 name={props.name}

@@ -31,6 +31,10 @@
                 transform: translateY(0);
                 transition-delay: 0.1s !important;
             }
+            p {
+                opacity: 1;
+                transition-delay: 0.35s;
+            }
             ul li {
                 animation: toolsAppearsAnim 0.11s ease-in-out forwards;
             }
@@ -62,9 +66,14 @@
             font-size: 26px;
             opacity: 0;
             text-align: center;
-            transition: transform 0.25s ease-in-out, opacity 0.25s ease-out;
+            transition: 0.25s ease-in-out;
             transform: translateY(-200px);
             width: 70%;
+        }
+        p {
+            margin-top: var(--space-l);
+            opacity: 0;
+            transition: 0.25s ease-in-out;
         }
         ul {
             width: 70%;

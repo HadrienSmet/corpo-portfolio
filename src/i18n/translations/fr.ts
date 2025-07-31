@@ -12,7 +12,7 @@ export const fr = {
                     title: "<default>Plus sur <styled>moi</styled></default>",
                 },
                 description: {
-                    "0": "Salut ! Je suis un développeur full stack vivant à Bruxelles. Le français est ma langue maternelle, mais je parle aussi couramment anglais et je comprends le néerlandais.",
+                    "0": "Salut ! Je suis développeur full-stack basé à Bruxelles, je code le jour et je rêve en JavaScript la nuit. Le français est ma langue maternelle, mais je parle aussi couramment anglais tout en ayant de bonnes bases de néerlandais.",
                     "1": "J'ai commencé à apprendre le développement web il y a 4 ans par moi-même le soir en rentrant du travail. Et je me suis très vite découvert une nouvelle passion !",
                     "2": "J’adore voyager et découvrir de nouvelles cultures, et j’espère avoir un jour l’opportunité de vivre et travailler à l’étranger. En plus du développement web, j’aime apprendre de nouvelles choses et lire de la philosophie.",
                     "3": "Je suis une personne positive, optimiste et dynamique, toujours prête à relever de nouveaux défis et à apprendre. Je suis enthousiaste à l’idée de mettre mes compétences et mon énergie au service d’une entreprise et de projets passionnants.",
@@ -66,13 +66,14 @@ export const fr = {
                 title: "Développeur Front-end",
                 descriptions: {
                     0: "En tant que développeur Full-Stack avec une forte spécialisation en développement Front-End, j’ai passé les deux dernières années à contribuer au sein d’une startup dynamique, où j’ai joué un rôle clé dans la conception et l’optimisation de l’expérience utilisateur.",
-                    1: "Côté front-end, j’ai conçu et développé de nouvelles pages, composants et formulaires, en veillant à offrir une expérience fluide et responsive sur tous les appareils. J’ai pris en charge des fonctionnalités telles que le mode hors ligne, les mises à jour de l’interface, l’affichage des e-mails et la gestion des versions de l’application, tout en m’efforçant de produire un code propre, maintenable et évolutif.",
-                    2: "Au-delà du front-end, j’ai élargi mon champ de compétences vers le back-end, en travaillant en profondeur avec les services AWS pour développer des pipelines de traitement de données, interagir avec des bases de données (DynamoDB) et intégrer divers systèmes. J’ai mis en œuvre des traitements par lots, des stratégies de chiffrement et des améliorations de l’infrastructure cloud, démontrant ainsi ma capacité à faire le lien entre les technologies front-end et back-end.",
+                    1: "Côté front-end, j’ai conçu et développé de nouvelles pages, composants et formulaires, en veillant à offrir une expérience fluide et responsive sur tous les appareils. J’ai pris en charge des fonctionnalités telles que le mode hors ligne, les mises à jour de l’interface, l’affichage des e-mails et la gestion des versions de l’application, tout en m’efforçant de produire un code propre, maintenable et évolutif. J’ai également amélioré certaines logiques existantes en optimisant les appels réseau et la gestion des états pour limiter les re-rendus et améliorer les performances globales.",
+                    2: "Au-delà du front-end, j’ai élargi mon champ de compétences vers le back-end, en travaillant en profondeur avec AWS pour développer des pipelines de traitement de données, interagir avec des bases de données et intégrer divers systèmes. J’ai mis en œuvre des traitements par lots, des stratégies de chiffrement et des améliorations de l’infrastructure cloud, démontrant ainsi ma capacité à faire le lien entre les technologies front-end et back-end.",
                     3: "J’évolue avec aisance dans des environnements collaboratifs, j’apprécie relever des défis techniques complexes, et je suis passionné par la création d’interfaces utilisateur de qualité, qui renforcent l’engagement et les performances.",
                 },
             },
             title: "Expériences professionnelles",
         },
+        learnMore: "Cliques pour en apprendre plus",
         months: {
             "01": "Janvier",
             "02": "Février",
@@ -122,13 +123,13 @@ export const fr = {
                     comingSoon: {
                         "0": "Bientôt, Leonor's App fera passer la préparation des interprètes à un nouveau niveau grâce à des analyses basées sur l’IA. En traitant les fichiers de réunion via des modèles linguistiques avancés, la plateforme extraira automatiquement les concepts clés, les termes techniques, les listes d’intervenants et les sources pertinentes.",
                         "1": "Cela permettra aux interprètes de gagner du temps et de se concentrer sur l’essentiel. À partir de ces analyses générées par l’IA, l’application enrichira les préparations en récupérant automatiquement des traductions multilingues, des images des intervenants et des ressources contextuelles.",
-                        "2": "Toutes les sessions de préparation, les termes de vocabulaire et les notes essentielles seront enregistrés et organisés dans une base de connaissances personnelle — facilitant ainsi la réutilisation du travail et le développement de l’expertise au fil du temps.",
+                        "2": "Toutes les sessions de préparation, les termes de vocabulaire et les notes essentielles seront enregistrés et organisés dans une base de connaissances personnelle, facilitant ainsi la réutilisation du travail et le développement de l’expertise au fil du temps.",
                         "3": "C’est la prochaine étape vers un environnement de préparation intelligent et adaptatif, où les interprètes gagnent à la fois en efficacité et en compréhension approfondie.",
                     },
                     descriptions: {
-                        "0": "(Seule le client est disponible) Leonor's App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration.",
+                        "0": "(Seul le client est disponible) Leonor's App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration.",
                         "1": "Les utilisateurs peuvent créer des espaces de travail personnalisés avec prise en charge multilingue et codes couleur sur mesure, afin de faciliter la mémorisation et la navigation dans les documents. La plateforme permet de déposer des fichiers de réunion, d’annoter des PDF (surligner, souligner, dessiner) et de transformer des textes en ressources interactives grâce à des notes liées ou à l’ajout de termes dans un tableau de vocabulaire multilingue. Tous les éléments interactifs sont interconnectés pour une navigation fluide.",
-                        "2": "Avec une interface épurée et personnalisable — thèmes clair/sombre, colonnes redimensionnables et sections déplaçables — Leonor's App s’adapte à chaque méthode de travail pour offrir un espace de préparation à la fois flexible et efficace.",
+                        "2": "Avec une interface épurée et personnalisable, thèmes clair/sombre, colonnes redimensionnables et sections déplaçables, Leonor's App s’adapte à chaque méthode de travail pour offrir un espace de préparation à la fois flexible et efficace.",
                     },
                     name: "Leonor's App",
                     videos: {
@@ -175,8 +176,8 @@ export const fr = {
             videos: "Vidéos",
         },
         routes: {
-            aboutMe: "Aspects personnels",
-            aboutWork: "Aspects professionnels",
+            aboutMe: "Perso",
+            aboutWork: "Pro",
             home: "Accueil",
         },
     },

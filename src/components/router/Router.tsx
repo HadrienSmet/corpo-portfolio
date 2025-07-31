@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes, useLocation, useParams } from "react-router";
 
+import { LocaleProvider } from "@/contexts";
 import i18n from "@/i18n";
 import { SUPPORTED_LANGUAGES } from "@/i18n/translations";
 import { Layout } from "@/layout";
@@ -35,33 +36,35 @@ export const ScrollToTop = () => {
 
 export const Router = () => (
     <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-            <Route
-                element={(
-                    <LanguageHandler>
-                        <Layout />
-                    </LanguageHandler>
-                )}
-                path=":locale"
-            >
+        <LocaleProvider>
+            <ScrollToTop />
+            <Routes>
                 <Route
-                    element={<Home />}
-                    index
-                />
+                    element={(
+                        <LanguageHandler>
+                            <Layout />
+                        </LanguageHandler>
+                    )}
+                    path=":locale"
+                >
+                    <Route
+                        element={<Home />}
+                        index
+                    />
+                    <Route
+                        element={<AboutMe />}
+                        path={ROUTES.aboutMe}
+                    />
+                    <Route
+                        element={<AboutWork />}
+                        path={ROUTES.aboutWork}
+                    />
+                </Route>
                 <Route
-                    element={<AboutMe />}
-                    path={ROUTES.aboutMe}
+                    element={<Navigate to="/en" replace />}
+                    path="*"
                 />
-                <Route
-                    element={<AboutWork />}
-                    path={ROUTES.aboutWork}
-                />
-            </Route>
-            <Route
-                element={<Navigate to="/en" replace />}
-                path="*"
-            />
-        </Routes>
+            </Routes>
+        </LocaleProvider>
     </BrowserRouter>
 );

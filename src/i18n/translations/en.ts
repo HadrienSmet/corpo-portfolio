@@ -12,7 +12,7 @@ export const en = {
                     title: "<default>More about <styled>me</styled></default>",
                 },
                 description: {
-                    "0": "Hi! I am a full stack developer living in Brussels. My native language is French but I also speak fluently English and I understand Dutch.",
+                    "0": "Hey there! I'm a full-stack developer based in Brussels, where I code by day and dream in JavaScript by night. French is my native language, but I’m fluent in English and can understand Dutch pretty well too.",
                     "1": "I started learning web development on my own four years ago, studying in the evenings after work. I quickly discovered a new passion for it!",
                     "2": "I love traveling and discovering new cultures, and I hope to have the opportunity to live and work abroad one day. In addition to web development, I enjoy learning new things, and reading philosophy.",
                     "3": "I am a positive, optimistic, and dynamic person, always ready to tackle new challenges and learn new things. I am excited to use my skills and enthusiasm to serve a company and work on exciting projects.",
@@ -63,16 +63,17 @@ export const en = {
         experiences: {
             future: "You might be the next one!",
             reachup: {
-                title: "Front-end developper",
+                title: "Front-end developer",
                 descriptions: {
                     0: "As a Full-Stack Developer with a strong emphasis on Front-End Development, I have spent the past two years contributing to a fast-paced startup, where I played a key role in shaping and optimizing the user experience.",
-                    1: "On the front end, I designed and implemented new pages, components, and forms, ensuring a smooth and responsive experience across devices. I handled offline functionality, UI updates, email displays, and application versioning, always striving for clean, maintainable, and scalable code.",
-                    2: "Beyond front-end, I expanded my expertise into the back-end, working extensively with AWS services to develop data processing pipelines, database interactions (DynamoDB), and system integrations. I implemented batch processing, encryption strategies, and cloud infrastructure improvements, showcasing my ability to bridge the gap between front-end and back-end technologies.",
+                    1: "On the front end, I designed and implemented new pages, components, and forms, ensuring a smooth and responsive experience across devices. I handled offline functionality, UI updates, email displays, and application versioning, always striving for clean, maintainable, and scalable code. I also improved existing logic by optimizing data fetching and state management, reducing unnecessary renders and network calls to enhance overall performance.",
+                    2: "Beyond front-end, I expanded my expertise into the back-end, working extensively with AWS to develop data processing pipelines, database interactions, and system integrations. I implemented batch processing, encryption strategies, and cloud infrastructure improvements, showcasing my ability to bridge the gap between front-end and back-end technologies.",
                     3: "I thrive in collaborative environments, enjoy tackling complex technical challenges, and am passionate about delivering high-quality user interfaces that enhance engagement and performance.",
                 },
             },
             title: "Professionnal experiences",
         },
+        learnMore: "Click to learn more",
         months: {
             "01": "January",
             "02": "February",
@@ -109,7 +110,7 @@ export const en = {
                     descriptions: {
                         "0": "I created this project to deepen my understanding of WebSockets and explore real-time interactions on the web. Cloning the popular game Gartic Phone offered a fun and technically challenging way to push my limits, while also working with professional-grade design inspiration.",
                         "1": "This project helped me strengthen my skills in managing real-time data, multiplayer logic, and game state synchronization. The app is fully responsive, though gameplay currently requires a mouse for drawing. For now, there is one drawing tool and a single game mode available.",
-                        "2": "Developped more than two years ago, the deployed seams to be currently broken. I will have to investigate to restore it once I'll find the time"
+                        "2": "Developed more than two years ago, the deployed seams to be currently broken. I will have to investigate to restore it once I'll find the time"
                     },
                     name: "Cloned Gartic Phone - Fourth personnal project",
                 },

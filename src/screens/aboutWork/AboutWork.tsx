@@ -1,20 +1,20 @@
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
-import { useLocale } from "@/hooks";
 import { ThemedInkBackground } from "@/layout";
 
 import { SectionJobs, SectionProjects, SectionStacks } from "./sections";
 import "./aboutWork.scss";
 
 export const AboutWork = () => {
-    const { locale } = useLocale();
+    const { i18n } = useTranslation();
+
     return (
         <div className="about-work-page">
             <ThemedInkBackground parentClassName="about-work" />
             <div className="about-work first-screen-view">
                 <Trans
                     i18nKey="about.work.title"
-                    lang={locale}
+                    lang={i18n.language}
                     components={{
                         default: <h1></h1>,
                         styled: <span></span>,

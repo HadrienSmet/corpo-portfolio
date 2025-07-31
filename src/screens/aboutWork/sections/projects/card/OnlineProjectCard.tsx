@@ -84,6 +84,7 @@ export const OnlineProjectCard = ({ project, onClick }: OnlineProjectCardProps) 
                         <li key={tool}>{tool}</li>
                     ))}
                 </ul>
+                <p>{t("learnMore")}</p>
             </div>
         </div>
     );

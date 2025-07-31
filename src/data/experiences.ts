@@ -34,7 +34,7 @@ export const JOBS: Array<Experience> = [
                 start: "31/10/2023",
             },
             stacks: ["React", "React-Native", "TypeScript", "NodeJS", "AWS"],
-            title: "Front-end developper",
+            title: "Front-end developer",
         },
         type: EXPERIENCE_TYPE.past,
     },

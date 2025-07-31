@@ -1,9 +1,8 @@
-import { RefObject, useEffect, useRef } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 import { getLocalizedPath, GlowingButton, ROUTES } from "@/components";
-import { useElementVisibility, useWindowSize } from "@/hooks";
+import { useElementVisibility } from "@/hooks";
 
 import { useDoubleImageDimensions } from "../useDoublieImageDimensions";
 
@@ -12,15 +11,11 @@ import "./detailsContainer.scss";
 type DetailCardProps = {
     readonly details: Array<string>;
     readonly dynamicClass: string;
-    readonly ref: RefObject<HTMLButtonElement | null>;
     readonly title: string;
     readonly to: string;
 };
-const DetailCard = ({ details, dynamicClass, ref, title, to }: DetailCardProps) => (
-    <GlowingButton
-        className={dynamicClass}
-        ref={ref}
-    >
+const DetailCard = ({ details, dynamicClass, title, to }: DetailCardProps) => (
+    <GlowingButton className={`${dynamicClass} visible`}>
         <Link
             to={getLocalizedPath(to)}
             className={dynamicClass}
@@ -44,43 +39,7 @@ const DetailCard = ({ details, dynamicClass, ref, title, to }: DetailCardProps) 
     </GlowingButton>
 );
 
-const useDetailsOnMouseMove = () => {
-    const { width } = useWindowSize();
-
-    const myRef = useRef<HTMLButtonElement | null>(null);
-    const myWorkRef = useRef<HTMLButtonElement | null>(null);
-
-    useEffect(() => {
-        const handlePictureOnMouseMove = (e: MouseEvent) => {
-            const ratioX = (e.clientX / width) * 100;
-
-            if (ratioX < 50) {
-                myWorkRef.current?.classList.add("visible");
-                myRef.current?.classList.remove("visible");
-            } else {
-                myWorkRef.current?.classList.remove("visible");
-                myRef.current?.classList.add("visible");
-            }
-        };
-
-        window.addEventListener("mousemove", handlePictureOnMouseMove);
-
-        myWorkRef.current?.classList.add("visible");
-        myRef.current?.classList.add("visible");
-
-        return () => {
-            window.removeEventListener("mousemove", handlePictureOnMouseMove);
-        };
-    }, [width]);
-
-    return ({
-        myRef,
-        myWorkRef,
-    });
-};
-
 export const DetailsContainer = () => {
-    const { myRef, myWorkRef } = useDetailsOnMouseMove();
     const { height, width } = useDoubleImageDimensions();
     const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
@@ -93,7 +52,6 @@ export const DetailsContainer = () => {
                 t("about.work.card.items.stack"),
             ],
             dynamicClass: "details-about-my-work",
-            ref: myWorkRef,
             title: t("about.work.card.title"),
             to: ROUTES.aboutWork,
         },
@@ -105,7 +63,6 @@ export const DetailsContainer = () => {
                 t("about.me.card.items.personnalityTests"),
             ],
             dynamicClass: "details-about-me",
-            ref: myRef,
             title: t("about.me.card.title"),
             to: ROUTES.aboutMe,
         },
@@ -115,7 +72,7 @@ export const DetailsContainer = () => {
         <div
             ref={elementRef}
             className="details-container"
-            style={{ gap: width, height }}
+            style={{ gap: width + 80, height }}
         >
             {cards.map(card => <DetailCard key={card.to} {...card} />)}
         </div>
