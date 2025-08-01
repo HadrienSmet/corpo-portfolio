@@ -103,10 +103,10 @@
     --clr-bg-secondary-03: rgba(255, 255, 255, .3);
     --clr-bg-secondary-04: rgba(255, 255, 255, .4);
     --clr-bg-secondary-05: rgba(255, 255, 255, .5);
+    --clr-bg-secondary-06: rgba(255, 255, 255, .6);
     --clr-bg-secondary-07: rgba(255, 255, 255, .7);
     --clr-bg-secondary-08: rgba(255, 255, 255, .8);
     --clr-bg-secondary-09: rgba(255, 255, 255, .9);
-
 
     --clr-disabled:            rgba(0, 28, 52,0.4);
 
@@ -116,5 +116,11 @@
     --clr-txt-02:            rgba(255,255,255,0.2);
     --clr-txt-01:            rgba(255,255,255,0.1);
 
-    --clr-txt-onBg:                   rgb(17, 16, 16);
+    --clr-txt-onBg:                rgb(17, 16, 16);
+    --clr-txt-onBg-03:        rgba(17, 16, 16, .3);
+    --clr-txt-onBg-04:        rgba(17, 16, 16, .4);
+    --clr-txt-onBg-05:        rgba(17, 16, 16, .5);
+    --clr-txt-onBg-06:        rgba(17, 16, 16, .6);
+    --clr-txt-onBg-07:        rgba(17, 16, 16, .7);
+    --clr-txt-onBg-08:        rgba(17, 16, 16, .8);
 }
