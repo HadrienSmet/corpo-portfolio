@@ -110,7 +110,8 @@ export const en = {
                         "1": "This project helped me strengthen my skills in managing real-time data, multiplayer logic, and game state synchronization. The app is fully responsive, though gameplay currently requires a mouse for drawing. For now, there is one drawing tool and a single game mode available.",
                         "2": "Developed more than two years ago, the deployed seams to be currently broken. I will have to investigate to restore it once I'll find the time"
                     },
-                    name: "Cloned Gartic Phone - Fourth personnal project",
+                    name: "Cloned Gartic Phone",
+                    overview: "Developed as a way to explore web sockets, Gartic Clone is a fairly simple replica of Gartic Phone"
                 },
                 leonorapp: {
                    alts: {
@@ -129,6 +130,7 @@ export const en = {
                         "2": "With a clean, customizable interface—dark/light themes, resizable columns, and draggable sections—Leonor's App adapts to each interpreter's workflow, creating a preparation space that's both flexible and efficient.",
                     },
                     name: "Leonor's App",
+                    overview: "Leonor's App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity",
                     videos: {
                         customisable: {
                             description: "Leonor's App is a customisable workspace including dark and light theming, redimensionable columns and draggable sections",
@@ -165,7 +167,8 @@ export const en = {
                         "1": "For now, the site includes a snake game, pong game, a clone of tetris and flappy bird.",
                         "2": "Built during my first steps into web development, Tinyclip is full of charm… and a few bugs. Responsiveness wasn’t invited to the party either — please be kind!"
                     },
-                    name: "Tinyclip - Third personnal project",
+                    name: "Tinyclip",
+                    overview: "Gathers all the min-games clones I developed to sharpen my algorithmic skills"
                 },
             },
             screenshots: "Screenshots",

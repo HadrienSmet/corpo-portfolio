@@ -110,7 +110,8 @@ export const fr = {
                         "1": "Ce projet m’a permis de renforcer mes compétences en gestion de données en temps réel, logique multijoueur et synchronisation des états de jeu. L'application est entièrement responsive, même si le jeu nécessite pour l'instant l'utilisation d'une souris pour dessiner. Un seul outil de dessin et un mode de jeu sont disponibles à ce stade.",
                         "2": "Développé il y a plus de deux ans, la version déployée semble actuellement cassée. Je devrai investiguer pour la remettre en état dès que j'aurai un peu de temps.",
                     },
-                    name: "Clone de Gartic Phone – Quatrième projet personnel",
+                    overview: "Développé afin de découvrir les web sockets, Gartic clone est une réplique assez pauvre de Gartic Phone",
+                    name: "Clone de Gartic Phone",
                 },
 
                 leonorapp: {
@@ -130,6 +131,7 @@ export const fr = {
                         "2": "Avec une interface épurée et personnalisable, thèmes clair/sombre, colonnes redimensionnables et sections déplaçables, Leonor's App s’adapte à chaque méthode de travail pour offrir un espace de préparation à la fois flexible et efficace.",
                     },
                     name: "Leonor's App",
+                    overview: "Leonor's App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration",
                     videos: {
                         customisable: {
                             description: "Leonor's App propose un espace de travail personnalisable avec thèmes clair/sombre, colonnes redimensionnables et sections déplaçables",
@@ -166,7 +168,8 @@ export const fr = {
                         "1": "Pour le moment, le site contient le jeu du serpent, le jeu du pong, une réplique de tetris de flappy bird.",
                         "2": "Réalisé lors de mes premiers pas dans le développement web, Tinyclip a son charme… et aussi quelques bugs. La responsivité n’a pas encore été invitée à la fête — merci pour votre indulgence !"
                     },
-                    name: "Tinyclip - Troisième projet personnel",
+                    name: "Tinyclip",
+                    overview: "Tinyclip rassemble tous les clones de mini-jeux que j'ai développé dans le but d'améliorer mes compétences en algorithmie"
                 },
             },
             screenshots: "Captures d'écran",

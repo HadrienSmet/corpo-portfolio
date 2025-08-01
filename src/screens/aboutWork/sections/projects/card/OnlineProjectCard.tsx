@@ -79,12 +79,13 @@ export const OnlineProjectCard = ({ project, onClick }: OnlineProjectCardProps) 
             />
             <div className="online-project__card-content ">
                 <h3>{t(`projects.online.${project.id}.name`)}</h3>
+                <p className="project-card-overview">{t(`projects.online.${project.id}.overview`)}</p>
                 <ul>
                     {project.tools.map((tool) => (
                         <li key={tool}>{tool}</li>
                     ))}
                 </ul>
-                <p>{t("learnMore")}</p>
+                <p className="project-card-explanation">{t("learnMore")}</p>
             </div>
         </div>
     );

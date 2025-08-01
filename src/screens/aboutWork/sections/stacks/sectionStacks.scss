@@ -9,7 +9,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-        .stacks-container svg {
+        .stacks-container .stack-with-label {
             animation: appearFromBottom 0.2s ease-out forwards;
         }
     }
@@ -26,7 +26,7 @@
         min-width: 710px;
         width: 45%;
 
-        svg {
+        .stack-with-label {
             opacity: 0;
             transform: translateY(10%);
 
