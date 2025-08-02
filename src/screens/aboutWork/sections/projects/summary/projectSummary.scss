@@ -27,6 +27,7 @@
         display: flex;
         flex: 1;
         gap: var(--space-l);
+        overflow: hidden;
         width: 100%;
     }
     &-content {
@@ -65,6 +66,7 @@
     &-links {
         align-items: center;
         display: flex;
+        flex-wrap: wrap;
         gap: var(--space-l);
         justify-content: center;
         padding-top: var(--space-m);
@@ -74,7 +76,9 @@
             display: flex;
             font-weight: 600;
             gap: var(--space-m);
+            justify-content: center;
             letter-spacing: 1px;
+            width: 280px;
         }
     }
     &-views {

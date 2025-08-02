@@ -18,7 +18,7 @@ export const ThemedInkBackground = ({ parentClassName }: ThemedInkBackgroundProp
     const { width } = useWindowSize();
 
     useEffect(() => {
-        const ratio = width / REFERENCE_WIDTH;
+        const ratio = Math.max(width / REFERENCE_WIDTH, .8);
         setScale(ratio);
     }, [width]);
 

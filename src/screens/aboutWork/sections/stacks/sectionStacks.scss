@@ -22,9 +22,8 @@
 
     .stacks-container {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--space-l);
-        min-width: 710px;
-        width: 45%;
 
         .stack-with-label {
             opacity: 0;

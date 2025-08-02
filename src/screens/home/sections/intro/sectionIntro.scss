@@ -7,7 +7,7 @@
     &-title {
         display: flex;
         flex-direction: column;
-        font-size: clamp(40px, 4vw, 90px);
+        font-size: clamp(48px, 4vw, 90px);
         letter-spacing: var(--space-xs);
         line-height: 1;
 
@@ -81,9 +81,13 @@
     .cv-row {
         display: flex;
         flex-direction: column;
+        height: 100%;
         justify-content: flex-end;
+        overflow: hidden;
         padding-bottom: var(--space-xl);
         padding-right: var(--space-xl);
+        position: absolute;
+        right: 0;
 
         &.visible {
             a {

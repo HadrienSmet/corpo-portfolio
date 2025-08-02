@@ -12,7 +12,8 @@
         align-items: center;
         display: flex;
         position: relative;
-        width: 60%;
+        width: 100%;
+        max-width: calc(var(--max-content-width)*.8);
 
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) label {
