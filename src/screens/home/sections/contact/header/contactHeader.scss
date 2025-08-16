@@ -105,7 +105,7 @@
             display: flex;
             height: 60px;
             justify-content: center;
-            min-width: 60px;
+            min-width: 45px;
             overflow: hidden;
             position: relative;
             &:hover {
@@ -138,10 +138,10 @@
             height: 45px;
             justify-content: center;
             max-width: 330px;
+            width: 30%;
             min-width: 200px;
             text-transform: uppercase;
             transition: 0.12s ease-in-out;
-            width: calc(100% - 380px);
 
             &:hover {
                 color: var(--clr-txt);

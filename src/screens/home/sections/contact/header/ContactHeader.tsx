@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { Facebook, Github, Linkedin } from "@/assets";
+import { Github, Linkedin } from "@/assets";
 import { useCssVariable } from "@/hooks";
 
 import "./contactHeader.scss";
@@ -45,17 +45,6 @@ export const ContactHeader = () => {
                         dynamicClass="active"
                     />
                     <Linkedin color={mainText} />
-                </a>
-                <a
-                    href="https://github.com/HadrienSmet"
-                    target="_blank"
-                    aria-label="Link to my github"
-                >
-                    <Facebook
-                        color="#0766FF"
-                        dynamicClass="active"
-                    />
-                    <Facebook color={mainText} />
                 </a>
                 <a
                     href="/docs/cv_hadrien-smet_fullstack-developer.pdf"
