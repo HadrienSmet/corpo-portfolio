@@ -7,7 +7,7 @@ import "./contactHeader.scss";
 
 export const ContactHeader = () => {
     const mainText = useCssVariable("--clr-txt");
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     return (
         <div className="contact-header">
@@ -47,7 +47,10 @@ export const ContactHeader = () => {
                     <Linkedin color={mainText} />
                 </a>
                 <a
-                    href="/docs/cv_hadrien-smet_fullstack-developer.pdf"
+                    href={i18n.language === "en"
+                        ? "/docs/cv_hadrien-smet_fullstack-developer.pdf"
+                        : "/docs/cv_hadrien-smet_developpeur-fullstack.pdf"
+                    }
                     download
                 >
                     {t("contact.curriculum")}

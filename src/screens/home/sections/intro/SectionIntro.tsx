@@ -8,7 +8,7 @@ const DEVELOPPER_NAME = "Hadrien Smet";
 export const SectionIntro = () => {
     const { elementRef: titleRef } = useElementVisibility({});
     const { elementRef: linkRef } = useElementVisibility({});
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
 
     return (
         <section className="intro">
@@ -27,10 +27,13 @@ export const SectionIntro = () => {
                 ref={linkRef}
             >
                 <a
-                    href="/docs/cv_hadrien-smet_fullstack-developer.pdf"
+                    href={i18n.language === "en"
+                        ? "/docs/cv_hadrien-smet_fullstack-developer.pdf"
+                        : "/docs/cv_hadrien-smet_developpeur-fullstack.pdf"
+                    }
                     download
                 >
-                    Download my cv
+                    {t("contact.curriculum")}
                 </a>
             </div>
         </section>
