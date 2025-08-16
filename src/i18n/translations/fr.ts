@@ -13,7 +13,7 @@ export const fr = {
                     "0": "Salut ! Je suis développeur full-stack basé à Bruxelles, je code le jour et je rêve en JavaScript la nuit. Le français est ma langue maternelle, mais je parle aussi couramment anglais tout en ayant de bonnes bases de néerlandais.",
                     "1": "J'ai commencé à apprendre le développement web il y a 4 ans par moi-même le soir en rentrant du travail. Et je me suis très vite découvert une nouvelle passion !",
                     "2": "J’adore voyager et découvrir de nouvelles cultures, et j’espère avoir un jour l’opportunité de vivre et travailler à l’étranger. En plus du développement web, j’aime apprendre de nouvelles choses et lire de la philosophie.",
-                    "3": "Je suis une personne positive, optimiste et dynamique, toujours prête à relever de nouveaux défis et à apprendre. Je suis enthousiaste à l’idée de mettre mes compétences et mon énergie au service d’une entreprise et de projets passionnants.",
+                    "3": "Je suis une personne positive, optimiste et dynamique, toujours prêt à relever de nouveaux défis et à apprendre. Je suis enthousiaste à l’idée de mettre mes compétences et mon énergie au service d’une entreprise et de projets passionnants.",
                 },
                 hobbies: {
                     code: "Coder",
