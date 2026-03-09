@@ -24,7 +24,7 @@
 .details-container {
     align-items: flex-start;
     display: flex;
-	height: 100%;
+	height: calc(100% - 20px);
     justify-content: space-between;
     opacity: 0;
     padding-inline: var(--space-giga);

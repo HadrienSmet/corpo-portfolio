@@ -1,6 +1,7 @@
 export * from "./Article";
 export * from "./Check";
 export * from "./DoubleUp";
+export * from "./Download";
 export * from "./ExpandMore";
 export * from "./Hiking";
 export * from "./Home";

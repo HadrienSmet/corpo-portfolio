@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 
-import { useElementVisibility } from "@/hooks";
+import { Download } from "@/assets";
+import { useCssVariable, useElementVisibility } from "@/hooks";
 
 import "./sectionIntro.scss";
 
 const DEVELOPPER_NAME = "Hadrien Smet";
 export const SectionIntro = () => {
+	const iconClr = useCssVariable("--clr-txt");
     const { elementRef: titleRef } = useElementVisibility({});
     const { elementRef: linkRef } = useElementVisibility({});
     const { i18n, t } = useTranslation();
@@ -33,7 +35,8 @@ export const SectionIntro = () => {
                     }
                     download
                 >
-                    {t("contact.curriculum")}
+                    <Download color={iconClr} />
+					<span>cv</span>
                 </a>
             </div>
         </section>

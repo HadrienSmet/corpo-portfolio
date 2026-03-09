@@ -97,6 +97,7 @@
         }
 
         a {
+			align-items: center;
             background: linear-gradient(
                 90deg,
                 var(--clr-bg-secondary),
@@ -112,22 +113,27 @@
             background-size: 1000%;
             animation: backgroundTitleAnim 20s linear alternate infinite;
             border: var(--border-m) solid var(--clr-txt);
-            border-radius: var(--radius-s);
+            border-radius: var(--radius-round);
             color: var(--clr-txt-onBg);
             cursor: pointer;
+			display: flex;
             font-size: clamp(1.2em, 1.8vw, 2em);
-            font-weight: 900;
+            font-weight: 700;
+			gap: var(--space-l);
             letter-spacing: 1px;
             opacity: 0;
             padding: var(--space-l) var(--space-giga);
-            text-transform: uppercase;
             transform: translateX(20%);
             transition: 0.4s;
+
+			path {
+				fill: var(--clr-txt-onBg);
+			}
 
             &:hover {
                 background: unset;
                 background-color: var(--clr-bg);
-                color: var(--clr-txt)
+                color: var(--clr-txt);
             }
         }
     }
