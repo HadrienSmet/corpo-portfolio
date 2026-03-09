@@ -5,7 +5,7 @@
     gap: var(--space-l);
     position: relative;
     max-height: var(--project-content-height);
-    overflow: scroll;
+    overflow-y: scroll;
 
     .screenshots-container {
         display: flex;

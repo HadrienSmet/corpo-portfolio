@@ -88,7 +88,7 @@ export const DetailsContainer = () => {
         myRef,
         myWorkRef,
     } = useDetailsOnMouseMove();
-    const { height, width } = useDoubleImageDimensions();
+    const { width } = useDoubleImageDimensions();
     const { elementRef } = useElementVisibility({});
     const { t } = useTranslation();
 
@@ -120,10 +120,7 @@ export const DetailsContainer = () => {
         <div
             ref={elementRef}
             className="details-container"
-            style={{
-                maxWidth: width+(2*258),
-                height
-            }}
+            style={{ maxWidth: width+(2*258) }}
         >
             {cards.map(card => <DetailCard key={card.to} {...card} />)}
         </div>

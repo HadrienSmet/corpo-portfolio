@@ -15,7 +15,7 @@ const parsePeriod = (period: string): number => {
 };
 export const OnlineProjectsContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [projectId, setProjectId] = useState<string>("leonorapp");
+    const [projectId, setProjectId] = useState<string>("interpretorapp");
 
     const { setLockedView } = useHeaderContext();
 

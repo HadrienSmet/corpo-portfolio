@@ -81,24 +81,24 @@ export const ONLINE_PROJECTS: Record<string, ProjectType> = {
         period: "2023/04",
         tools: ["NextJS", "React", "TypeScript", "Socket.IO", "NodeJS"],
     },
-    leonorapp: {
+    "interpretorapp": {
         comingSoonSegments: 4,
         descriptionsSegments: 3,
-        id: "leonorapp",
-        imageLink: "leonor-app_0.webp",
+        id: "interpretorapp",
+        imageLink: "interpretorapp_0.webp",
         images: [
             {
-                url: "leonor-app_0.webp",
+                url: "interpretorapp_0.webp",
                 id: "folders",
             },
             {
-                url: "leonor-app_1.webp",
+                url: "interpretorapp_1.webp",
                 id: "vocabulary",
             },
         ],
         links: {
             client: "https://github.com/HadrienSmet/interpetors_monorepo.git",
-            prod: "https://leonor-app.netlify.app/"
+            prod: "https://interpretor-app.netlify.app/"
         },
         period: "2025/07",
         tools: ["React", "TypeScript", "NestJS"],

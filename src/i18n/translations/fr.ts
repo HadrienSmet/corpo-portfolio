@@ -114,7 +114,7 @@ export const fr = {
                     name: "Clone de Gartic Phone",
                 },
 
-                leonorapp: {
+                "interpretorapp": {
                     alts: {
                         folders: "Préparation de réunion - Page des dossiers sources",
                         vocabulary: "Préparation de réunion - Page du vocabulaire généré",

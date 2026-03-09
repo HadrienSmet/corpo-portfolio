@@ -41,7 +41,7 @@ const STACKS: Array<StackWithLabelProps> = [
         icon: <NodeJs {...ICON_PROPS} />,
     },
     {
-        label: "Aws",
+        label: "Amazon Web Services",
         icon: <Aws {...ICON_PROPS} />,
     },
     {
