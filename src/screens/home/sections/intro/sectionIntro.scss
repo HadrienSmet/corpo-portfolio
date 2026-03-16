@@ -128,12 +128,17 @@
 
 			path {
 				fill: var(--clr-txt-onBg);
+				transition: 0.4s;
 			}
 
             &:hover {
                 background: unset;
                 background-color: var(--clr-bg);
                 color: var(--clr-txt);
+
+				path {
+					fill: var(--clr-txt);
+				}
             }
         }
     }
