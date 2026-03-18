@@ -82,8 +82,8 @@ export const ONLINE_PROJECTS: Record<string, ProjectType> = {
         tools: ["NextJS", "React", "TypeScript", "Socket.IO", "NodeJS"],
     },
     "interpretorapp": {
-        comingSoonSegments: 4,
-        descriptionsSegments: 3,
+        comingSoonSegments: 3,
+        descriptionsSegments: 4,
         id: "interpretorapp",
         imageLink: "interpretorapp_0.webp",
         images: [

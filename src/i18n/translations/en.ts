@@ -121,7 +121,7 @@ export const en = {
                     comingSoon: {
                         "0": "Soon, Interpreter App will take interpreter preparation to the next level with AI-driven insights. By processing meeting files through advanced language models, this platform will automatically extract key concepts, technical terms, speaker lists, and relevant sources.",
                         "1": "This will help interpreters save time and focus on what matters. From these AI-generated insights, Interpreter App will enrich preparations by automatically retrieving multilingual translations, speaker images, and contextual resources.",
-                        "3": "This is the next step in creating a smart, adaptive preparation environment where interpreters gain both efficiency and deep understanding."
+                        "2": "This is the next step in creating a smart, adaptive preparation environment where interpreters gain both efficiency and deep understanding."
                     },
                     descriptions: {
                         "0": "(In maintenance while separating the dev and prod environments) Interpreter App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity.",

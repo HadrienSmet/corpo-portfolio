@@ -122,7 +122,7 @@ export const fr = {
                     comingSoon: {
                         "0": "Bientôt, Interpreter App fera passer la préparation des interprètes à un nouveau niveau grâce à des analyses basées sur l’IA. En traitant les fichiers de réunion via des modèles linguistiques avancés, la plateforme extraira automatiquement les concepts clés, les termes techniques, les listes d’intervenants et les sources pertinentes.",
                         "1": "Cela permettra aux interprètes de gagner du temps et de se concentrer sur l’essentiel. À partir de ces analyses générées par l’IA, l’application enrichira les préparations en récupérant automatiquement des traductions multilingues, des images des intervenants et des ressources contextuelles.",
-                        "3": "C’est la prochaine étape vers un environnement de préparation intelligent et adaptatif, où les interprètes gagnent à la fois en efficacité et en compréhension approfondie.",
+                        "2": "C’est la prochaine étape vers un environnement de préparation intelligent et adaptatif, où les interprètes gagnent à la fois en efficacité et en compréhension approfondie.",
                     },
                     descriptions: {
                         "0": "(En maintenance le temps de séparer les environnements de prod et dev)Interpreter App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration.",
