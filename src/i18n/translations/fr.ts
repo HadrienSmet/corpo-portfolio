@@ -120,25 +120,25 @@ export const fr = {
                         vocabulary: "Préparation de réunion - Page du vocabulaire généré",
                     },
                     comingSoon: {
-                        "0": "Bientôt, Leonor's App fera passer la préparation des interprètes à un nouveau niveau grâce à des analyses basées sur l’IA. En traitant les fichiers de réunion via des modèles linguistiques avancés, la plateforme extraira automatiquement les concepts clés, les termes techniques, les listes d’intervenants et les sources pertinentes.",
+                        "0": "Bientôt, Interpreter App fera passer la préparation des interprètes à un nouveau niveau grâce à des analyses basées sur l’IA. En traitant les fichiers de réunion via des modèles linguistiques avancés, la plateforme extraira automatiquement les concepts clés, les termes techniques, les listes d’intervenants et les sources pertinentes.",
                         "1": "Cela permettra aux interprètes de gagner du temps et de se concentrer sur l’essentiel. À partir de ces analyses générées par l’IA, l’application enrichira les préparations en récupérant automatiquement des traductions multilingues, des images des intervenants et des ressources contextuelles.",
-                        "2": "Toutes les sessions de préparation, les termes de vocabulaire et les notes essentielles seront enregistrés et organisés dans une base de connaissances personnelle, facilitant ainsi la réutilisation du travail et le développement de l’expertise au fil du temps.",
                         "3": "C’est la prochaine étape vers un environnement de préparation intelligent et adaptatif, où les interprètes gagnent à la fois en efficacité et en compréhension approfondie.",
                     },
                     descriptions: {
-                        "0": "(Seul le client est disponible) Leonor's App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration.",
+                        "0": "(En maintenance le temps de séparer les environnements de prod et dev)Interpreter App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration.",
                         "1": "Les utilisateurs peuvent créer des espaces de travail personnalisés avec prise en charge multilingue et codes couleur sur mesure, afin de faciliter la mémorisation et la navigation dans les documents. La plateforme permet de déposer des fichiers de réunion, d’annoter des PDF (surligner, souligner, dessiner) et de transformer des textes en ressources interactives grâce à des notes liées ou à l’ajout de termes dans un tableau de vocabulaire multilingue. Tous les éléments interactifs sont interconnectés pour une navigation fluide.",
-                        "2": "Avec une interface épurée et personnalisable, thèmes clair/sombre, colonnes redimensionnables et sections déplaçables, Leonor's App s’adapte à chaque méthode de travail pour offrir un espace de préparation à la fois flexible et efficace.",
+                        "2": "Avec une interface épurée et personnalisable, thèmes clair/sombre, colonnes redimensionnables et sections déplaçables, Interpreter App s’adapte à chaque méthode de travail pour offrir un espace de préparation à la fois flexible et efficace.",
+						"3": "Toutes les sessions de préparation, les termes de vocabulaire et les notes essentielles sont enregistrés et organisés dans une base de connaissances personnelle, facilitant ainsi la réutilisation du travail et le développement de l’expertise au fil du temps.",
                     },
-                    name: "Leonor's App",
-                    overview: "Leonor's App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration",
+                    name: "Interpreter App",
+                    overview: "Interpreter App est une plateforme de productivité conçue pour aider les interprètes à se préparer aux réunions avec clarté et concentration",
                     videos: {
                         customisable: {
-                            description: "Leonor's App propose un espace de travail personnalisable avec thèmes clair/sombre, colonnes redimensionnables et sections déplaçables",
+                            description: "Interpreter App propose un espace de travail personnalisable avec thèmes clair/sombre, colonnes redimensionnables et sections déplaçables",
                             title: "Espace de travail personnalisable",
                         },
                         historic: {
-                            description: "L'éditeur de fichiers de Leonor's App intègre un historique des actions permettant d'annuler une modification indésirable",
+                            description: "L'éditeur de fichiers de Interpreter App intègre un historique des actions permettant d'annuler une modification indésirable",
                             title: "Historique des actions",
                         },
                         interractivity: {

@@ -119,25 +119,25 @@ export const en = {
                         vocabulary: "Meeting preparation - Generated vocabulary screen",
                     },
                     comingSoon: {
-                        "0": "Soon, Interpretor App will take interpreter preparation to the next level with AI-driven insights. By processing meeting files through advanced language models, this platform will automatically extract key concepts, technical terms, speaker lists, and relevant sources.",
-                        "1": "This will help interpreters save time and focus on what matters. From these AI-generated insights, Interpretor App will enrich preparations by automatically retrieving multilingual translations, speaker images, and contextual resources.",
-                        "2": "All preparation sessions, vocabulary terms, and essential notes will be saved and organized in a personal knowledge base—making it easy for interpreters to reuse their work and build expertise over time.",
+                        "0": "Soon, Interpreter App will take interpreter preparation to the next level with AI-driven insights. By processing meeting files through advanced language models, this platform will automatically extract key concepts, technical terms, speaker lists, and relevant sources.",
+                        "1": "This will help interpreters save time and focus on what matters. From these AI-generated insights, Interpreter App will enrich preparations by automatically retrieving multilingual translations, speaker images, and contextual resources.",
                         "3": "This is the next step in creating a smart, adaptive preparation environment where interpreters gain both efficiency and deep understanding."
                     },
                     descriptions: {
-                        "0": "(Only the client available) Interpretor App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity.",
+                        "0": "(In maintenance while separating the dev and prod environments) Interpreter App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity.",
                         "1": "Users create custom workspaces with multilingual support and personalized color codes to enhance memorization and document navigation. The platform lets interpreters upload meeting files, annotate PDFs (highlight, underline, draw), and turn texts into interactive resources by creating linked notes or adding terms to a multilingual vocabulary table. All interactive elements are cross-referenced for seamless navigation.",
                         "2": "With a clean, customizable interface—dark/light themes, resizable columns, and draggable sections—Interpretor App adapts to each interpreter's workflow, creating a preparation space that's both flexible and efficient.",
+						"3": "All preparation sessions, vocabulary terms, and essential notes are saved and organized in a personal knowledge base, making it easy for interpreters to reuse their work and build expertise over time.",
                     },
-                    name: "Interpretor App",
-                    overview: "Interpretor App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity",
+                    name: "Interpreter App",
+                    overview: "Interpreter App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity",
                     videos: {
                         customisable: {
-                            description: "Interpretor App is a customisable workspace including dark and light theming, redimensionable columns and draggable sections",
+                            description: "Interpreter App is a customisable workspace including dark and light theming, redimensionable columns and draggable sections",
                             title: "Customisable workspace",
                         },
                         historic: {
-                            description: "Interpretor App files editor includes an actions historic to allow to remove an unwanted modification",
+                            description: "Interpreter App files editor includes an actions historic to allow to remove an unwanted modification",
                             title: "Actions historic",
                         },
                         interractivity: {
