@@ -124,7 +124,7 @@ export const en = {
                         "2": "This is the next step in creating a smart, adaptive preparation environment where interpreters gain both efficiency and deep understanding."
                     },
                     descriptions: {
-                        "0": "(In maintenance while separating the dev and prod environments) Interpreter App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity.",
+                        "0": "Interpreter App is a productivity platform designed to help interpreters prepare for meetings with focus and clarity.",
                         "1": "Users create custom workspaces with multilingual support and personalized color codes to enhance memorization and document navigation. The platform lets interpreters upload meeting files, annotate PDFs (highlight, underline, draw), and turn texts into interactive resources by creating linked notes or adding terms to a multilingual vocabulary table. All interactive elements are cross-referenced for seamless navigation.",
                         "2": "With a clean, customizable interface—dark/light themes, resizable columns, and draggable sections—Interpretor App adapts to each interpreter's workflow, creating a preparation space that's both flexible and efficient.",
 						"3": "All preparation sessions, vocabulary terms, and essential notes are saved and organized in a personal knowledge base, making it easy for interpreters to reuse their work and build expertise over time.",

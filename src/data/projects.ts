@@ -98,7 +98,7 @@ export const ONLINE_PROJECTS: Record<string, ProjectType> = {
         ],
         links: {
             client: "https://github.com/HadrienSmet/interpetors_monorepo.git",
-            prod: "https://interpretor-app.netlify.app/"
+            prod: "https://interpreter-app.eu/"
         },
         period: "2025/07",
         tools: ["React", "TypeScript", "NestJS"],
